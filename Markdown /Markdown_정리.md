@@ -137,7 +137,7 @@ EX) [MLP 홈페이지 바로가기](https://lc.multicampus.com/k-digital/#/login
 
 을 통해 이미지를 사용할 수 있다.
 
- ![짱구](Markdown 정리_김예린.assets/짱구.jpeg)
+ ![짱구](./TIL/Markdown/Markdown_정리.assets/짱구.jpeg)
 
 ### 인용문 (Blockquotes)
 
