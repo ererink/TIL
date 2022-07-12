@@ -127,7 +127,7 @@ EX) [MLP 홈페이지 바로가기](https://lc.multicampus.com/k-digital/#/login
 
 * 내부 파일(폴더) 링크하기
   * 소괄호에 ./를 붙인다
-  * [Markdown](./Git:Github)
+  * [Markdown](./Markdown%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5.assets/)
 
 
 
@@ -137,7 +137,7 @@ EX) [MLP 홈페이지 바로가기](https://lc.multicampus.com/k-digital/#/login
 
 을 통해 이미지를 사용할 수 있다.
 
- ![짱구](./Markdown%EC%A0%95%EB%A6%AC.assets/%EC%A7%B1%EA%B5%AC.jpeg)
+ ![짱구](./Markdown%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5.assets/%E1%84%8D%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AE.jpeg)
 
 이렇게!
 
