@@ -39,7 +39,7 @@ word = input()
 
 for i in range(len(word)):
   if word[i] == 'a':
-    print(i, end = "")
+    print(i, end = " ")
 
 # 방법 2. 리스트를 담는 방법
 word = input()
