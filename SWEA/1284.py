@@ -27,6 +27,7 @@ for test_case in range(1, t + 1): # test case만큼 반복한다.
     else:
         print('#{} {}'.format(test_case, a_com))
 
-  
+  # print('#{test_case} {min{A, B}}') 도 가능하다.
+
 
 

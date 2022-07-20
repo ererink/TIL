@@ -10,3 +10,6 @@ n = int(input(), 16)
 for i in range(1, 16):
 
     print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
+
+# print('%X'%n)   
+# n에 저장되어있는 값을 16진수(hexadecimal) 형태로 출력
