@@ -5,15 +5,17 @@
 t = int(input())
 for test_case in range(1, t + 1):
 
-    word = str(input())
-    palindrome = True
+    word = input()
+    result = ''
 
-    for i in range(len(word) // 2):
-        if word[i] == word[-1 -i]:
-            print('#{} {}'.format(test_case, '1'))
-            break
-        else:
-            print('#{} {}'.format(test_case, '0'))
-            break
+    for i in range(len(word)-1, -1, -1): # 역순으로 i에 하나씩 넣는다.
+        result += word[i]                # 정수가 아닌 word의 문자열로 역순된 
+                                         # 값을 result에 하나씩 넣는다. 
+
+    if result == word:                   # 역순된 값(result)와 원래의 값(word)를 비교한다.
+        print('#{} {}'.format(test_case, '1'))
+    else:                                # result와 word가 같지 않을 경우 '0'을 출력한다.
+        print('#{} {}'.format(test_case, '0'))
+
 
 
