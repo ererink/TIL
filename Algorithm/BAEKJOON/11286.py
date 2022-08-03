@@ -3,11 +3,11 @@
 
 import heapq
 
-N = int(input())
+N = int(sys.stdin.readline())
 heap = []
 
 for test_case in range(N):
-    numbers = int(input())
+    numbers = int(sys.stdin.readline())
 
     # 입력값이 0이 아닌 경우
     if numbers != 0:                                    # 0이 아니면 heap 리스트에 입력값을 추가한다.
