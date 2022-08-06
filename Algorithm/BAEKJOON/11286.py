@@ -1,6 +1,6 @@
 # 절대값 힙
-# 시간초과
 
+import sys
 import heapq
 
 N = int(sys.stdin.readline())

@@ -14,6 +14,7 @@
 
 ### What I Learned ⁉️
 
+* [Solve Algorithms](./Algorithm/)
 * [Markdown](./Git_Github/Markdown%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5.md)
 * [로컬 저장소와 원격 저장소](./Git_Github/%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A5%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A9%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%80%E1%85%A7%E1%86%A8%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A9.md)
 * [Branch와 Github Flow](./Git_Github/Branch%E1%84%8B%E1%85%AA%20Github%20Flow.md)
@@ -31,3 +32,6 @@
 * [실습 문제 풀이](./%EC%8B%A4%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%20%ED%92%80%EC%9D%B4/)
 * [실습 문제 풀이 정리](./Python/%EC%8B%A4%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%20%ED%92%80%EC%9D%B4.md)
 * [실습 문제 풀이 정리 2](./Python/%EC%8B%A4%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%20%ED%92%80%EC%9D%B4%202.md)
+* [Stack and Queue](./Python/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90.md)
+* [Heap and Set](./Python/%ED%9E%99%EA%B3%BC%20%EC%85%8B.md)
+* [2D list](./Python/%EC%9D%B4%EC%B0%A8%EC%9B%90%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
