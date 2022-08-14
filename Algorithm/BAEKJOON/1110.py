@@ -1,6 +1,17 @@
-n = input()
-result = ''
+n = int(input())
+cal_n = n
+cnt = 0
 
-while n == result:
-    result = n[0] + n[1]
-    print(result[1] + n[1])
+while True:
+    a = cal_n // 10
+    b = cal_n % 10
+    c = (a + b) % 10
+    cal_n = (b * 10) + c
+
+    cnt += 1
+
+    if cal_n == n:
+        break
+
+print(cnt)
+

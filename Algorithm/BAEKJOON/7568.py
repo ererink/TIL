@@ -10,16 +10,9 @@ for i in range(N):
     # 리스트에 몸무게와 키 저장
     list_.append((weight,height))
 
-ranks = [0] * N
-# 모든 사람을 비교하기 위한 이중반복문
-for a in range(N):
-    A = list_[a]
-    for b in range(N):
-        B = list_[b]
-
-        # 덩치가 큰지 확인
-        if A[0] > B[0] and A[1] > B[1]:
-            ranks[b] += 1
-
-for rank in ranks:
-    print(rank+1, end=' ')
+for i in list_:
+    rank = 1
+    for j in list_:
+        if i[0] < j[0] and i[1] < j[1]:
+                rank += 1
+    print(rank, end = " ")
