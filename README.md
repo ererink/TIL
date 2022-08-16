@@ -33,6 +33,8 @@ Organizing a summary of what I learned every day.
 * [Graph](./Python/%EA%B7%B8%EB%9E%98%ED%94%84%20graph.md)
 * [DFS & BFS](./Python/DFS%20BFS.md)
 
+* [Database Summary](./SQL/Database%20Summary.md.md)
+
 * [프로젝트 정리](./Python/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%A0%95%EB%A6%AC.md)
 * [프로젝트 정리 2](./Python/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%A0%95%EB%A6%AC2.md)
 * [실습 오답 기록](./Python/%EC%8B%A4%EC%8A%B5%20%EC%98%A4%EB%8B%B5%20%EA%B8%B0%EB%A1%9D.md)
