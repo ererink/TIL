@@ -29,8 +29,7 @@
 * **키와 값**들의 간단한 관계를 **표** 형태로 정리한 데이터베이스이다. 
 
 
-
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/rdb.png" title="" alt="rdb.png" data-align="center">
+![rdb](./SQL%20Summary.assets/rdb.png)
 
 ## 스키마 Schema
 
@@ -38,7 +37,7 @@
 
 아래의 이미지와 같이 id, name 등 해당 key의 이름과 데이터 타입을 정하여 명세표를 작성한다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/schema.png" alt="schema.png" data-align="center" width="389">
+![schema](./SQL%20Summary.assets/schema.png)
 
 
 
@@ -50,7 +49,7 @@
 
 
 
-![table.png](C:\Users\yelki\OneDrive\사진\스크린샷\table.png)
+![table.png](./SQL%20Summary.assets/table.png)
 
 ### 
 
@@ -58,7 +57,7 @@
 
 각 열에 **고유한 데이터 형식**을 지정한다. 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/name%20column.png" title="" alt="name column.png" data-align="center">
+![column](./SQL%20Summary.assets/name%20column.png)
 
 
 
@@ -70,7 +69,7 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 
 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/row%20data.png" title="" alt="row data.png" data-align="center">
+![row](./SQL%20Summary.assets/row%20data.png)
 
 
 
@@ -90,7 +89,7 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 
 * 주민등록번호, 학번 등과 같은 개념이다. 
 
-![primary key.png](C:\Users\yelki\OneDrive\사진\스크린샷\primary%20key.png)
+![primary key.png](./SQL%20Summary.assets/primary%20key.png)
 
 
 
