@@ -1,5 +1,3 @@
-
-
 # Database
 
 * 데이터베이스는 체계화된 **데이터의 모임**이다. 
@@ -9,8 +7,6 @@
 * 자료의 모음으로 검색과 갱신의 효휼화를 위해 고도로 구조화한 것이다. 
 
 * 자료 항목의 중복을 없애고 구조화하여 저장해놓은 자료의 집합체이다. 
-
-
 
 ### 장점
 
@@ -26,17 +22,15 @@
 
 * 보안유지 
 
-
-
 # 관계형 데이터베이스 RDB; Relation Database
 
 * 서로 관련된 데이터를 저장하고 접근할 수 있는 데이터베이스 유형이다. 
 
 * **키와 값**들의 간단한 관계를 **표** 형태로 정리한 데이터베이스이다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/rdb.png" alt="rdb.png" data-align="center" width="561">
 
 
+<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/rdb.png" title="" alt="rdb.png" data-align="center">
 
 ## 스키마 Schema
 
@@ -44,7 +38,7 @@
 
 아래의 이미지와 같이 id, name 등 해당 key의 이름과 데이터 타입을 정하여 명세표를 작성한다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/schema.png" alt="schema.png" data-align="center" width="394">
+<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/schema.png" alt="schema.png" data-align="center" width="389">
 
 
 
@@ -54,7 +48,9 @@
 
 즉, 스키마의 명세를 바탕으로 테이블을 만들어 데이터를 알맞은 형식에 맞게 정렬한다. 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/table.png" title="" alt="table.png" data-align="center">
+
+
+![table.png](C:\Users\yelki\OneDrive\사진\스크린샷\table.png)
 
 ### 
 
@@ -64,25 +60,25 @@
 
 <img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/name%20column.png" title="" alt="name column.png" data-align="center">
 
+
+
 name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것이다. 
-
-
 
 ### 행 row/record/value
 
 실제 데이터가 저장되는 형태이다. 
 
+
+
 <img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/row%20data.png" title="" alt="row data.png" data-align="center">
 
+
+
 위 테이블에서 행이란 3명의 고객 정보가 저장되어 있는 것이다. 
-
-
 
 즉, 저장된 데이터는 행 / 로우 / 레코드 / 값이라고 부르며,
 
 이러한 데이터의 형식을 묶어주는 역할을 열 / 컬럼 / 필드라고 부른다. 
-
-
 
 ### 기본키 PK;Primary Key
 
@@ -94,7 +90,7 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 
 * 주민등록번호, 학번 등과 같은 개념이다. 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/primary%20key.png" title="" alt="primary key.png" data-align="center">
+![primary key.png](C:\Users\yelki\OneDrive\사진\스크린샷\primary%20key.png)
 
 
 
@@ -103,8 +99,6 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 * 관계형 모델을 기반으로 데이터베이스를 관시하는 시스템을 의미한다. 
   
   * ex. MySQL, oracle, SQLite 등 
-
-
 
 ## SQLite Data Type
 
@@ -122,44 +116,27 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
   
   * 입력된 그대로 저장된 데이터 (별다른 타입 없이 저장)
 
- 
-
 ## Typenames from the CREATE table statement and Resulting affinity
-
-
 
 #### INTEGER
 
 * INT, INTEGER, TUNYINT, SMALLINT, MEDIUMINT, BIGINT, UNSIGNED BIG INT, INT2, INT8
 
-
-
 #### TEXT
 
 * CHARACTER(20), VARCHAR(255), VARYING CHARACTER(255), NCHAR(55), NATIVE CHARACTER(70), NVARCHAR(100), TEXT, CLOB
-
-
 
 #### BLOB
 
 * no datatype
 
-
-
 #### REAL
 
 * REAL, DOUBLE, DOUBLE PRECISION, FLOAT
 
-
-
 ### NUMERIC
 
 * NUMERIC, DECIMAL(10, 5), BOOLEAN, DATE, DATETIME
-
-
-
-
-
 
 # SQL; Structured Query Language
 
@@ -171,8 +148,6 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 
 * 데이터베이스의 객체 접근을 조정 및 관리한다. 
 
-
-
 ### DDL; Data Definition Language, 데이터 정의 언어
 
 * 관계형 데이터베이스의 구조(테이블, 스키마)를 정의한다. 
@@ -181,15 +156,11 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
   
   * 테이블 및 스키마 생성, 삭제, 변경
 
-
-
 ### DML; Data Manipulation Language, 데이터 조작 언어
 
 * 데이터를 저장, 조회, 수정, 삭제 등을 명령한다. 
 
 * INSERT, SELECT, UPDATE, DELETE
-
-
 
 ### DCL (Data Control Language) (데이터 제어 언어)
 
@@ -197,13 +168,7 @@ name이란 열(column, filed)에 고객들의 이름 데이터가 저장된 것�
 
 * GRANT, REVOKE, COMMIT, ROLLBACK
 
-
-
-
-
 # 테이블 생성 및 삭제
-
-
 
 ## CREATE
 
@@ -218,8 +183,6 @@ CREATE TABLE classmates (
 
 );
 ```
-
-
 
 ```sql
 sqlite> .table
@@ -237,11 +200,7 @@ CREATE TABLE classmates (
 
 .table로 테이블 명을 조회한다. 
 
-
-
 .schema classmates 를 통해 특정 테이블의 스키마를 조회할 수 있다. 
-
-
 
 ## DROP
 
@@ -254,8 +213,6 @@ example
 ```
 
 DROP 을 통해 테이블 자체를 삭제한다. 
-
-
 
 ## 필드 제약 조건
 
@@ -271,15 +228,9 @@ DROP 을 통해 테이블 자체를 삭제한다.
 
 - DEFAULT: 기본값을 설정한다.
 
-
-
-
-
 # CRUD
 
 CREATE, READ, UPDATE, DELETE 
-
-
 
 ## 1. CREATE
 
@@ -287,23 +238,17 @@ CREATE, READ, UPDATE, DELETE
 
 * "insert a single row into a table"
 
-
-
 * 테이블에 단일 행을 삽입한다. 
 
 ```sql
 INSERT INTO NAME OF TABLE (COL1, COL2) VALUES (VAL1, VAL2);
 ```
 
-
-
 * 테이블에 정의된 모든 컬럼에 맞춰 순서대로 입력한다. 
 
 ```sql
 INSERT INTO NAME OF TABLE VALUES (VAL1, VAL2, VAL3)
 ```
-
-
 
 #### 예문
 
@@ -316,8 +261,6 @@ INSERT INTO classmates (name, age) VALUES ('홍길동', 23);
 INSERT INTO classmates (name, age, address) VALUES ('홍길동', 30, '서울');
 ```
 
-
-
 ```
 sqlite> SELECT * FROM classmates;
 name        age         address
@@ -327,8 +270,6 @@ name        age         address
 ```
 
 첫 번째 홍길동의 주소가 빠진 데이터를 받게된다. 
-
-
 
 ```
 sqlite> SELECT rowid * FROM classmates;
@@ -342,8 +283,6 @@ rowid는 SQLite에서 자동으로 제공하고 있는 PK이다.
 
 Primary Key가 없는 경우 자동으로 PK 컬럼이 증가한다. 
 
-
-
 ```sql
 sqlite> CREATE TABLE classmates (
     id INT PRIMARY KEY,
@@ -354,8 +293,6 @@ sqlite> CREATE TABLE classmates (
 ```
 
 빠짐없이 데이터를 받기 위해 테이블 생성 시 'NOT NULL'을 설정해야 한다. 
-
-
 
 # READ
 
@@ -372,8 +309,6 @@ sqlite> CREATE TABLE classmates (
 ```sql
 SELECT (조회하고 싶은 컬럼명) FROM (테이블명)
 ```
-
-
 
 ## LIMIT
 
@@ -400,8 +335,6 @@ SELECT rowid, name FROM classmates LIMIT 1 OFFSET 2;
 -- 3      이호영즉, 2칸 띄우고 출력함을 의미한다. 
 ```
 
-
-
 ## WHERE
 
 * 특정 검색 조건을 지정한다. 
@@ -419,13 +352,9 @@ SELECT name FROM classmates WHERE age >= 30;
 -- 김철수
 ```
 
-
-
 ### SELECT DISTINCT
 
 * 조회 결과에서 중복 행을 제거한다. 
-
-
 
 ```sql
 SELECT DISTINCT age FROM classmates;
@@ -436,10 +365,6 @@ SELECT DISTINCT age FROM classmates;
 -- 29
 -- 28
 ```
-
-
-
-
 
 ### DELETE
 
@@ -456,8 +381,6 @@ rowid  name  age  address
 3      이호영   26   인천
 4      박민희   29   대구
 ```
-
-
 
 ### UPDATE
 
@@ -477,12 +400,6 @@ rowid  name  age  address
 5      홍길동   40   제주도
 ```
 
-
-
 수정과 삭제는 primary key를 기준한다. 
 
 즉, rowid(id)를 기준으로 수정과 삭제가 이루어진다. 
-
-
-
-
