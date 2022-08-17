@@ -1,7 +1,5 @@
 # WHERE절 탐색 조건
 
-
-
 ## WHERE 절에서 사용할 수 있는 연산자
 
 ### 비교 연산자
@@ -9,8 +7,6 @@
 * =, > , >=, <, <=
 
 * 숫자 / 문자 값의 대 / 소, 동일 여부를 확인
-
-
 
 ### 논리 연산자
 
@@ -26,10 +22,6 @@
   
   * 뒤에 오는 조건의 결과가 반대인 경우 
 
-
-
-
-
 ## 기타 연산자
 
 ### BETWEEN  값1 AND 값2
@@ -38,13 +30,9 @@
 
 * (값1 <= 비교값 <= 값2)
 
-
-
 ### IN(값1, 값2, ...)
 
 * 목록 중 값이 하나라도 일치할 경우
-
-
 
 ### LIKE
 
@@ -56,13 +44,9 @@
   
   * _: 1개 단일 문자
 
-
-
 ### IS NULL / IS NOT NULL
 
 * NULL 여부를 확인할 때 항상 = 대신 IS를 활용한다. 
-
-
 
 ### 부정연산자
 
@@ -80,8 +64,6 @@ WHERE 칼럼명1 != 비교값1
     AND NOT 칼럼명5 > 비교값5;
 ```
 
-
-
 ### 우선순위
 
 1. 괄호
@@ -94,8 +76,6 @@ WHERE 칼럼명1 != 비교값1
 
 5. OR
 
-
-
 #### 예문
 
 ```sql
@@ -106,14 +86,10 @@ WHERE (HEIGHT = 175 OR HEIGHT = 183) AND WEIGHT = 80;
 ```
 
 1. 키가 175이거나, 키가 183이면서 몸무게가 80인 사람
-   
-   
 
 2. 키가 175 또는 183인 사람 중에서 몸무게가 80인 사람
    
    ↳ 괄호에 묶여있는 조건 먼저 인식하게 된다. 
-
-
 
 ## Aggregate Functions 집계 함수
 
@@ -124,8 +100,6 @@ WHERE (HEIGHT = 175 OR HEIGHT = 183) AND WEIGHT = 80;
 * MAX 
 
 * MIN SUM
-
-
 
 ### COUNT
 
@@ -139,8 +113,6 @@ SELECT COUNT(*) FROM users;
 
 ↳ user 테이블의 레코드 총 개수를 조회한다. 
 
-
-
 ### AVG
 
 * 값의 평균을 계산한다. 
@@ -149,15 +121,11 @@ SELECT COUNT(*) FROM users;
 SELECT AVG(컬럼) FROM 테이블이름;
 ```
 
-
-
 ```sql
 SELECT AVG(age) FROM users WHERE age>=30;
 ```
 
 ↳ user 테이블에서 30살 이상인 사람들의 평균 나이를 조회한다. 
-
-
 
 ### MAX
 
@@ -166,8 +134,6 @@ SELECT AVG(age) FROM users WHERE age>=30;
 ```sql
 SELECT MAX(컬럼) FROM 테이블이름;
 ```
-
-
 
 ```sql
 SELECT first_name, MAX(balance) FROM users;
@@ -212,8 +178,6 @@ SELECT SUM(컬럼) FROM 테이블이름;
     * 임의의 단일 문자
     
     * 반드시 '_' 자리에 한 개의 문자가 존재해야 한다. 
-  
-  
 
 ```sql
 SELECT * FROM 테이블이름 WHERE 컬럼 LIKE '패턴';
@@ -231,15 +195,11 @@ SELECT * FROM 테이블이름 WHERE 컬럼 LIKE '패턴';
 
 * **2_%_% / 2_ __%**: 2로 시작하고 적어도 3자리인 값 
 
-
-
 ```sql
 SELECT * FROM users WHERE age LIKE '2_';
 ```
 
 ↳ user 테이블에서 나이가 20대인 사람만 조회한다. 
-
-
 
 ```sql
 SELECT * FROM users WHERE first_name LIKE '%준';
@@ -247,15 +207,11 @@ SELECT * FROM users WHERE first_name LIKE '%준';
 
 ↳ users 테이블에서 이름이 ‘준’으로 끝나는 사람만 조회한다. 
 
-
-
 ```sql
 SELECT * FROM users WHERE phone LIKE '%-5114-%;
 ```
 
 ↳ users 테이블에서 중간 번호가 5114인 사람만 조회한다.
-
- 
 
 ## ORDER BY
 
@@ -267,19 +223,13 @@ SELECT * FROM users WHERE phone LIKE '%-5114-%;
 
 * DESC: 내림차순 
 
-
-
 ```sql
 SELECT * FROM 테이블이름 ORDER BY 컬럼 ASC;
 SELECT * FROM 테이블이름 ORDER BY 컬럼 DESC;
 ```
-
-
 
 ```sql
 SELECT * FROM users ORDER BY age, last_name ASC LIMIT 10;
 ```
 
 ↳ users 테이블에서 나이 순, 성 순으로 **오름차순** 정렬하여 **상위 10개만** 조회한다.
-
-
