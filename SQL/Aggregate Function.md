@@ -138,7 +138,7 @@ SELECT last_name AS 성 FROM users WHERE 성='김';
 SELECT * FROM users GROUP BY last_name;
 ```
 
-![group by.png](C:\Users\yelki\OneDrive\사진\스크린샷\group%20by.png)
+![group by.png](./SQL%20Summary.assets/group%20by.png)
 
 (((((((DISTINCT 아님!))))))))
 
