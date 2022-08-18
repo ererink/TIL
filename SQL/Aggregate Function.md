@@ -1,7 +1,5 @@
 # 기본 함수와 연산
 
- 
-
 ## 문자열 함수
 
 * SUBSTR(문자열, start, length)
@@ -9,8 +7,6 @@
   * 문자열 자르기
   
   * 시작 인덱스는 1, 마지막 인덱스는 -1
-  
-  
 
 * TRIM(문자열), LTRIN, RTRIM
   
@@ -26,8 +22,6 @@ SELECT LENGTH(first_name), firtst_name FROM users LIMIT 5;
 
       ↳ 문자열 길이를 반환한다.
 
-
-
 * REPLACE(문자열, 패턴, 변경값)
   
   * 패턴에 일치하는 부분을 변경한다. 
@@ -37,8 +31,6 @@ SELECT firtst_name REPLACE(phone, '-', '') FROM users LIMIT 5;
 ```
 
     ↳ REPLACE: 전화번호의 '-'를 모두 없앤다.
-
-
 
 * UPPER(문자열), LOWER
   
@@ -54,23 +46,15 @@ SELECT last_name || first_name FROM USERS LIMIT5;
 
     ↳ 문자열 합치기: 성과 이름 합치기
 
-
-
-
-
 ## 숫자 함수
 
 * ABS(숫자)
   
   * 절대값
 
-
-
 * SIGN(숫자)
   
   * 부호 (양수 1, 음수 -1, 0 0)
-
-
 
 * MOD(숫자1, 숫자2)
   
@@ -80,8 +64,6 @@ SELECT last_name || first_name FROM USERS LIMIT5;
 SELECT MOD(5, 2) FROM USERS LIMIT 1;
 >>> 1.0
 ```
-
-
 
 * CEIL(숫자), FLOOR(숫자), ROUND(숫자)
   
@@ -112,13 +94,9 @@ SELECT SQRT(9) FROM users LIMIT 1;
 >>> 3 
 ```
 
-
-
-
-
 # GROUP BY
 
-### Aggregate funtion 집계함수
+### Aggregate Function 집계함수
 
 * 값 집합에 대한 계산을 수행하고 **단일 값**을 반환한다. 
   
@@ -127,8 +105,6 @@ SELECT SQRT(9) FROM users LIMIT 1;
 * SELECT 구문에서만 사용된다. 
   
   * ex) COUNT(*), AVG(age), etc. 
-
-
 
 ### ALIAS
 
@@ -144,8 +120,6 @@ SELECT last_name AS 성 FROM users;
 SELECT last_name AS 성 FROM users WHERE 성='김';
 ```
 
-
-
 ### GROUP BY
 
 * “make a set of summary rows from a set of rows”
@@ -160,8 +134,6 @@ SELECT last_name AS 성 FROM users WHERE 성='김';
 
 * 행을 그룹화하고 각 그룹의 값을 반환한다. 
 
-
-
 ```sql
 SELECT * FROM users GROUP BY last_name;
 ```
@@ -170,15 +142,11 @@ SELECT * FROM users GROUP BY last_name;
 
 (((((((DISTINCT 아님!))))))))
 
-
-
 ```sql
 SELECT last_name, COUNT(*) FROM users GROUP BY last_name;
 ```
 
     ↳ user에서 각 성씨가 몇 명씩 있는지 조회한다. 
-
-
 
 * GROUP BY에서 활용하는 컬럼을 제외하고는 **집계함수**를 써야한다. 
 
@@ -192,8 +160,6 @@ GROUP BY last_name;
 
 해당하는 성씨의 첫번째 행에 있는 나이가 출력되기 때문에 (걍 아무 의미없는 출력값) 그룹화한 값들과 비교했을 때 아무 의미가 없다. 
 
-
-
 ```sql
 SELECT last_name, AVG(age), COUNT(*)
 FROM users
@@ -202,15 +168,11 @@ GROUP BY last_name;
 
 그러므로 AVG(age)와 같은 집계함수를 사용하여 GROUP BY에 맞는 출력값을 출력하도록 한다. 
 
-
-
 * GROUP BY의 결과는 정렬되지 않는다. 
   
   * 기존의 출력한 순서와 추후에 출력한 출력값이 다를 수 있다. 
   
   * 정렬은 무조건 ORDER BY를 사용한다. 
-
-
 
 * GROUP BY WHERE 사용
 
@@ -231,8 +193,6 @@ WHERE에서 GROUP BY를 통해 그룹화가 되지 않았기 때문에 출력에
 
 따라서, 조건에 따른 GROUP BY를 사용하려면 HAVING을 사용해야 한다. 
 
-
-
 ### GROUP BY HAVING
 
 ```sql
@@ -245,8 +205,6 @@ HAVING COUNT(last_name) > 100;
 * 집계함수는 실행 순서에 의해 WHERE 절의 조건식에서는 사용할 수 없다. 
 
 * 집계한 결과를 조건에 맞게 출력하기 위해 HAVING을 활용한다. 
-
-
 
 ## SELECT 문자 실행 순서
 
@@ -274,12 +232,6 @@ ORDER BY 칼럼 / 표현식
 6. ORDER BY: 정렬하고
 
 7. LIMIT / OFFSET: 특정 위치값을 가져온다!
-
-
-
-
-
-
 
 # ALTER TABLE
 
@@ -335,10 +287,6 @@ DROP COLUMN column_name;
   
   * 삭제 후 되돌릴 수 있다. 
 
-
-
-
-
 #### 예문
 
 * articles 테이블에 값을 추가하기
@@ -347,15 +295,11 @@ DROP COLUMN column_name;
 INSERT INTO articles VALUES('#1 title', '#1 content')
 ```
 
-
-
 * 테이블 이름 변경하기
 
 ```sql
 ALTER TABLE articels RENAME TO new articles;
 ```
-
-
 
 * 새로운 컬럼 추가하기
 
@@ -370,5 +314,3 @@ ALTER TABLE new articles ADD COLUMN new title TEXT NOT NULL;
 그러므로 컬럼 생성 시 레코드 없이 빈칸으로 생성되고, NOT NULL로 설정하였기 때문에 빈칸으로 둘 수 없어 오류가 나는 것이다. 
 
 오류를 해결하기 위해서는 기본값(DEFAULT)를 설정해야 한다. 
-
-
