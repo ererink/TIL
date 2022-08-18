@@ -17,3 +17,4 @@ is_drinking BOOLEAN NOT NULL
 -- csv import 하기
 .mode csv 
 .import health.csv healthcare
+
