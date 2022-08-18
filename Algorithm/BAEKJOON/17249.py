@@ -1,10 +1,14 @@
 # 태보태보 총난타
 
-taebo = input()
-left_hook = ''
-right_hook = ''
+location = 0
+p = [0, 0]
 
-for i in range(len(taebo)):
-    left_hook += taebo[i].split('(^0^)')
-    taebo.replace(taebo[i], '')
+for i in input():
+    if i == '@':
+        p[location] += 1
+
+    elif i == '(':
+        location += 1
+
+print(*p)
     
