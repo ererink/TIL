@@ -18,13 +18,13 @@
 
 어느 한 커뮤니티의 질문 테이블에서  '홍길동'의 role을 수정한다고 가정해보자. 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/join1.png" title="" alt="join1.png" data-align="center">
+![join](./SQL%20Summary.assets/join1.png)
 
 'student'를 '학생'으로 수정하기 위해서 하나의 테이블에서 연속적으로 수정이 이뤄져야 한다. 즉, 해당되는 데이터를 일일이 다 바꿔줘야 한다. 만약 이 데이터가 4개가 아닌 400만개 이상이라면 수정이 어려운 상황이다. 
 
 혹은 '홍길동'의 동명이인이 존재할 때 구별하지 못한다는 점이다. 
 
-<img src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/join2.png" title="" alt="join2.png" data-align="center">
+![join2](./SQL%20Summary.assets/join2.png)
 
 위의 문제점을 해결하기 위해 유저의 별도 데이터베이스로 나눠서 관리할 수 있다. 
 
@@ -36,9 +36,9 @@
 
 * 조건에 일치하는 (동일한 값이 있는) 행만 반환한다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/INNER%20JOIN.png" alt="INNER JOIN.png" width="396" data-align="center">
+![inner join](./SQL%20Summary.assets/INNER%20JOIN.png)
 
-![create table.png](C:\Users\yelki\OneDrive\사진\스크린샷\create%20table.png)
+![create table.png](./SQL%20Summary.assets/create%20table.png)
 
 users, role, articles 테이블이 존재한다.
 
@@ -57,7 +57,7 @@ FROM users INNER JOIN role
 
 ↳ users 테이블의 id와 role 테이블의 id를 조인한다. 
 
-![INNER JOIN 1.png](C:\Users\yelki\OneDrive\사진\스크린샷\INNER%20JOIN%201.png)
+![INNER JOIN 1.png](./SQL%20Summary.assets/INNER%20JOIN%201.png)
 
 ```sql
 SELECT *
@@ -73,7 +73,7 @@ WHERE role.id = 2;
 
 ↳ 스태프만 출력한다. 
 
-![INNER JOIN 2.png](C:\Users\yelki\OneDrive\사진\스크린샷\INNER%20JOIN%202.png)
+![INNER JOIN 2.png](./SQL%20Summary.assets/INNER%20JOIN%202.png)
 
 ```sql
 SELECT *
@@ -108,8 +108,7 @@ FROM 테이블1 [LEFT|RIGHT|FULL] OUTER JOIN 테이블2
 
 * LEFT/RIGHT/FULL을 지정한다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/OUTER%20JOIN.png" alt="OUTER JOIN.png" data-align="center" width="348">
-
+![outer join](./SQL%20Summary.assets/OUTER%20JOIN.png)
 #### LEFT OUTER JOIN
 
 ```sql
@@ -120,7 +119,7 @@ FROM articles LEFT OUTER JOIN users
 
 ↳ users 테이블의 id와 role 테이블의 id를 left join한다.
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/left%20join.png" alt="left join.png" data-align="center" width="593">
+![left join](./SQL%20Summary.assets/left%20join.png)
 
 article 테이블을 기준으로 user 테이블이 join 되었다. 
 
@@ -133,7 +132,7 @@ WHERE articles.users_id IS NOT NULL;
 
 ↳ LEFT OUTER JOIN 시 NULL 값을 빼고 출력한다. 
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/사진/스크린샷/left%20join%202.png" alt="left join 2.png" data-align="center" width="612">
+![left join2](./SQL%20Summary.assets/join2.png)
 
 #### FULL OUTER JOIN
 
@@ -145,7 +144,7 @@ FROM articles FULL OUTER JOIN users
 
 ↳ 모든 게시글과 모든 사용자 정보를 출력한다. 
 
-![left join.png](C:\Users\yelki\OneDrive\사진\스크린샷\left%20join.png)
+![left join](./SQL%20Summary.assets/left%20join.png)
 
 LEFT OUTER JOIN은 왼쪽 테이블(articles.users_id)에 상응하는 오른쪽 테이블(users.id)을 붙이는 것이지만, 
 
