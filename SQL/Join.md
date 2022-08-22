@@ -132,7 +132,7 @@ WHERE articles.users_id IS NOT NULL;
 
 ↳ LEFT OUTER JOIN 시 NULL 값을 빼고 출력한다. 
 
-![left join2](./SQL%20Summary.assets/join2.png)
+![left join2](./SQL%20Summary.assets/left%20join%202.png)
 
 #### FULL OUTER JOIN
 
