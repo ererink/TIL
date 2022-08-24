@@ -36,7 +36,7 @@ SELECT * FROM Genre;
 
 ### 모델 설계 및 반영
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/바탕%20화면/TIL/SQL/SQL%20Summary.assets/orm_model.png" alt="orm_model.png" data-align="center" width="212">
+![orm_table](./SQL%20Summary.assets/orm_model.png)
 
 #### 
 
