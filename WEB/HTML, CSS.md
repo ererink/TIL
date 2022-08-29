@@ -75,7 +75,8 @@
 
 ## 요소 Element
 
-<img title="" src="file:///C:/Users/yelki/OneDrive/바탕%20화면/TIL/WEB/WEB.assets/element.png" alt="element.png" data-align="left">
+![element](./WEB.assets/element.png)
+
 
 요소에는 여는 태그와 닫는 태그로 구성되어있다. 
 
@@ -110,7 +111,7 @@
 
 ## 속성 Attribute
 
-![arrtibute.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\WEB.assets\arrtibute.png)
+![arrtibute.png](./WEB.assets/arrtibute.png)
 
 * 태그별로 사용할 수 있는 속성은 다르다. 
 
@@ -171,7 +172,7 @@
 
 * 부모-자식 관계, 형제관계를 표현한다. 
 
-![dom.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\WEB.assets\dom.png)
+![dom.png](./WEB.assets/dom.png)
 
 (image from wikipedia)
 
@@ -223,7 +224,7 @@
 
 * 스타일을 지정하기 위한 언어이다.
 
-![css.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\WEB.assets\css.png)
+![css.png](./WEB.assets/css.png)
 
 ### CSS 구문
 
