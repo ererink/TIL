@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.top-caption {
+.title-caption {
     font-size: 12px;
     letter-spacing: 2px;
     text-align: center;
@@ -11,6 +11,7 @@
     text-align: center;
     margin: 2px;
 }
+
 .title-margin {
     margin-top: 0px;
 }
