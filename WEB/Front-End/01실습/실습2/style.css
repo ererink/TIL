@@ -8,21 +8,24 @@
 }
 .card-image {
     width: 300px;
-    border-radius: 1rem;
+    border-radius: 3px;
     margin: 10px;
 }
 .top-caption {
     margin: 2px;
     color: gray;
     font-weight: inherit;
+    margin-left: 20px;
 }
 .main-caption {
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: inherit;
+    margin-left: 20px;
 }
 .bottom-caption {
     margin: 2px;
+    margin-left: 20px;
 }
 .percentage {
     color: rgb(17, 196, 250);
