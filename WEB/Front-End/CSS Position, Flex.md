@@ -20,7 +20,7 @@
 
 relative는 자신의 원래 위치를 기준으로 배치하기 때문에 본래의 위치가 어디 있는지에 관련(relative)되어 있다.
 
-![relative.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\relative.png)
+![relative.png](./WEB.assets/relative.png)
 
 ↳ 1은 postision: relative;로 설정되었다.
 
@@ -38,7 +38,7 @@ normal flow를 유지한다는 것은 실제 위치는 그대로이지만, 육�
 
 가장 가까운 위치에 있는 조상 요소를 기준으로 한다. (조상이 있는 한 자신의 위치가 절대적으로 정해져 있다.)
 
-![absolute.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\absolute.png)
+![absolute.png](./WEB.assets/absolute.png)
 
 ↳ 1은 postision: absolute;로 설정되었다. 
 
@@ -53,7 +53,7 @@ normal flow에서 벗어난다는 것은 자신의 공간을 그대로 차지하
   - 스크롤 시에도 항상 같은 곳에 위치한다.
 - viewport에서 고정된 위치에 존재한다.
 
-![fixed.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\fixed.png)
+![fixed.png](./WEB.assets/fixed.png)
 
 CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 
@@ -77,7 +77,7 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 
 * 요소가 Normal flow를 벗어나도록 한다.
 
-  ![float.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\float.png)
+  ![float.png](./WEB.assets/float.png)
 
 (image from positiveko.github.io)
 
@@ -99,7 +99,7 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 }
 ```
 
-![flex.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flex.png)
+![flex.png](./WEB.assets/flex.png)
 
 * 행과 열 형태로 아이템들을 배치한다.
 
@@ -117,15 +117,15 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 
 * main axis의 방향을 설정한다.
 
-![flexrow.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexrow.png)
+![flexrow.png](./WEB.assets/flexrow.png)
 
 * 행 기준으로 나열한다.
 
-![flexrowreverse.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexrowreverse.png)
+![flexrowreverse.png](./WEB.assets/flexrowreverse.png)
 
-![flexcolumn.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexcolumn.png)
+![flexcolumn.png](./WEB.assets/flexcolumn.png)
 
-![flexcolumnreverse.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexcolumnreverse.png)
+![flexcolumnreverse.png](./WEB.assets/flexcolumnreverse.png)
 
 ## flex-wrap
 
@@ -133,7 +133,7 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 
 * 한 줄에 배치 되게 할 것인지의 여부를 설정한다.
 
-![flexwrap.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexwrap.png)
+![flexwrap.png](./WEB.assets/flexwrap.png)
 
 * 아이템이 해당 영역을 넘으면 그 다음 줄로 배치한다.
 
@@ -143,7 +143,7 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
  }
 ```
 
-![flexnowrap.png](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\flexnowrap.png)
+![flexnowrap.png](./WEB.assets/flexnowrap.png)
 
 * 무조건 한 줄에 배치하도록 한다.
 
@@ -151,7 +151,7 @@ CSS의 기본 원칙인 좌측상단에 위치하지 않는다.
 
 * main axis를 기준으로 공간을 배분한다.
 
-![justify.jpg](C:\Users\yelki\OneDrive\바탕%20화면\TIL\WEB\Front-End\WEB.assets\justify.jpg)
+![justify.jpg](./WEB.assets/justify.jpg)
 
 (image from 1분코딩)
 
