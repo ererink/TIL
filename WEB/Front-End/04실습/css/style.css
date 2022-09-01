@@ -9,6 +9,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   min-width: 1280px;
   color: #333333;
+  position: relative;
 }
 
 .nav {
@@ -17,7 +18,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 1rem;
+  padding: 2rem;
   height: 50px;
   background-color: white;
 }
@@ -80,7 +81,9 @@ body {
   justify-content: space-around;
   width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
+
 .more-eachcard {
   display: flex;
   align-items: center;
@@ -95,4 +98,50 @@ body {
 .more-img {
   width: 64px;
   height: 64px;
+}
+
+/* 추후에 sticky로 변경! */
+.top-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 8560px;
+}
+
+/* Products */
+
+.pro-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 0 20rem;
+}
+
+.each-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
+  line-height: 2;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-img {
+  background-image: url(../assets/yulia-gadalina-l0ascMtIQSw-unsplash.jpg);
+  width: 100%;
+  height: 8rem;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.card-caption {
+  text-align: left;
+  line-height: 1.5;
+  margin: 5px;
 }
