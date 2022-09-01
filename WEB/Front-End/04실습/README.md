@@ -2,9 +2,9 @@
 
 ## APPAERL SHOP
 
-![apparel1.png](./WEB.assets/apparel1.png)
+![apparel1.png](C:\Users\yelki\OneDrive\바탕 화면\TIL\WEB\Front-End\WEB.assets\apparel1_result.png)
 
-![apparel2.png](./WEB.assets/apparel2.png)
+![apparel2.png](C:\Users\yelki\OneDrive\바탕 화면\TIL\WEB\Front-End\WEB.assets\apparel2_result.png)
 
 
 
@@ -12,6 +12,6 @@
 
 ## PRODUCT
 
-![product.png](./WEB.assets/product.png)
+![product.png](C:\Users\yelki\OneDrive\바탕 화면\TIL\WEB\Front-End\WEB.assets\product_result.png)
 
 
