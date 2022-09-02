@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.logo {
+    width: 10%;
+    margin-left: 20px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav__list {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.main-nav__item {
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+.main-nav__link {
+    text-decoration: none;
+    color: gray;
+}
+
+.background {
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+	text-align: center;
+	position: absolute;
+}
+
+.background-text {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.bottom-card {
+    display: flex;
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8rem;
+    margin-left: 8px;
+    width: 10%;
+}
+
+.genre-text {
+    margin: 1px;
+    font-weight: lighter;
+}
+
+/* 큰 묶음 */
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    background-color: rgb(196, 195, 195);
+    width: 90%;
+
+}
+/* '실시간 영화 순위' 텍스트 설정*/
+.movielist-title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 3개의 이미지 묶음 */
+.images-card {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* 각 영화 이미지 */
+.movies-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1px;
+}
+.movie-title {
+    font-weight: bold;
+}
+
+.movie-img {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 5px;
+    margin: 0 3rem;
+}
