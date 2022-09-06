@@ -8,6 +8,7 @@ dice.append(c)
 
 if a == b == c:
     print(10000 + a * 1000)
+    
 elif a == b and a != c:
     print(1000 + a * 100)
 
