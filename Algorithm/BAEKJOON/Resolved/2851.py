@@ -16,7 +16,7 @@ if score > 100:
     elif under_ < over_:
         print(copy_score)
     else:
-        print()
+        print(score)
     
 else: 
     print(score)
