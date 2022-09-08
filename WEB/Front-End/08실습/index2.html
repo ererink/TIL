@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Bootstrap Item</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Shop
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All Products</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Popular Items</a></li>
+                <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                </ul>
+            </li>
+            </ul>
+            <form class="d-flex">
+            <button class="btn btn-outline-dark" type="submit">
+                <img class="width bs-white"src="./cart-fill.svg" alt="cart">
+                Cart
+                <a class="badge bg-dark text-white ms-1 rounded-pill text-decoration-none">0</a>
+            </button>
+            </form> 
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <!-- img -->
+                <div class="col-md-6">
+                    <img class="card-img-top mb-5 mb-md-0 rounded-1" src="./assets/sam-dan-truong-ju2NgSoR6pA-unsplash_copy.jpg" alt="pink cloud">
+                </div>
+                <!-- Caption -->
+                <div class="col-md-6">
+                    <div class="small mb-1">SKU: BST-498</div>
+                    <h1 class="display-5 fw-bolder">Shop item template</h1>
+                    <div class="fs-5 mb-5">
+                        <a class="text-muted text-decoration-line-through text-dark">$45.00</a>
+                        <a class="text-decoration-none text-dark">$40.00</a>
+                    </div>
+                    <p class="lead">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse culpa nobis dolorum ullam accusamus repellendus perferendis, ipsa quas quis, quos et, soluta necessitatibus magni? Esse, enim! Voluptatum maxime aut enim.
+                    </p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem">
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <img class="width bs-white"src="./cart-fill.svg" alt="cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">Related products</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                
+                <!-- 1 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- img -->
+                        <img class="card-img-top" src="./assets/martin-adams-XYxz-BUtt6I-unsplash.jpg">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                              <h5 class="fw-bolder">Fancy Product</h5>
+                              $40.00 - $80.00
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- img -->
+                        <img class="card-img-top" src="./assets/martin-adams-XYxz-BUtt6I-unsplash.jpg">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                              <h5 class="fw-bolder">Special Item</h5>
+                              <!-- Star review -->
+                              <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                              </div>
+                              <a class="text-muted text-decoration-line-through text-dark">$50.00</a>
+                              $18.00
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- img -->
+                        <img class="card-img-top" src="./assets/martin-adams-XYxz-BUtt6I-unsplash.jpg">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                              <h5 class="fw-bolder">Sale Item</h5>
+                              <a class="text-muted text-decoration-line-through text-dark">$50.00</a>
+                              $25.00
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- img -->
+                        <img class="card-img-top" src="./assets/martin-adams-XYxz-BUtt6I-unsplash.jpg">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                              <h5 class="fw-bolder">Popular Item</h5>
+                              <!-- Star review -->
+                              <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                              </div>
+                              $40.00
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4 px-lg-12">
+            <p class="m-0 text-center text-white">Copyright @Made by Erin Kim 2022</p>
+        </div>
+    </footer>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

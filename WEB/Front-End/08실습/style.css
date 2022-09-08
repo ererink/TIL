@@ -1,0 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+span::before {
+    content: "\f586";
+    font-family: bootstrap-icon;
+    color: rgb(252, 194, 5)
+}
