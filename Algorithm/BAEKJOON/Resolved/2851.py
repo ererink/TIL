@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-for _ in range(10):
-    score = int(input())
-=======
 score = 0
 
 for _ in range(10):
@@ -24,4 +20,3 @@ if score > 100:
     
 else: 
     print(score)
->>>>>>> 34ab63d38a94e9908e82e8acfe4a485f0eb6bd39
