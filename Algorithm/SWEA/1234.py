@@ -6,8 +6,10 @@ for test_case in range(1, 11):
 
     for i in nums:
         if len(stack) > 0:
+            
             if i == stack[-1]:
                 stack.pop()
+            
             else:
                 stack.append(i)
         
