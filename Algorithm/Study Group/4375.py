@@ -1,4 +1,4 @@
-# 1
+# 백준 1
 while True:
     try:
         n = int(input())
