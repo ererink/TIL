@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.mobile-content-body figure[data-ke-type="map"] {
+  width: auto !important;
+  height: auto !important;
+}
+
+.mobile-content-body figure[data-ke-type="video"] {
+  width: 100% !important;
+  height: calc(100vw / 2);
+}
+
+.mobile-content-body figure[data-ke-type="video"] img {
+  height: auto;
+}
+
+.mobile-content-body figure[data-ke-type="imageGrid"] img:nth-of-type(1) {
+  float: left;
+  margin-right: 0;
+}
+
+.mobile-content-body figure[data-ke-type="imageGrid"] img:nth-of-type(3) {
+  margin-left: 0;
+  float: right;
+}
+
+.mobile-content-body pre {
+  padding: 5px;
+}

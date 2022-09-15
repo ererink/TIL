@@ -1,0 +1,122 @@
+[contentEditable=false][data-mce-selected] {
+	outline: 2px solid #000;
+}
+
+.use_p_margin p + p,
+.use_p_margin p {
+	margin-bottom:30px;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+	font-weight: normal;
+	letter-spacing: -1px;
+	color: #000;
+	margin: 1em 0 20px;
+}
+
+.content h2 {
+	font-size: 1.62em;
+}
+.content h3 {
+	font-size: 1.44em;
+}
+.content h4 {
+	font-size: 1.25em;
+}
+
+figure[data-ke-type='file'] .image {
+	background-position: 0px 0px;
+}
+figure[data-ke-type='file'] .filename {
+	margin-bottom:0;
+}
+
+figure[data-ke-type='video'] .video_content::before,
+figure[data-ke-type='video'][data-video-host='kakaotv'] span {
+
+}
+
+figure[data-ke-type="opengraph"] .og-text p {
+    margin: 0;
+}
+
+div[data-ke-type="source"] {
+	position: relative;
+	margin: 10px auto 30px;
+	border: 1px solid #ddd;
+	background-color: #f6f7f8;
+}
+div[data-ke-type="source"] .source-title {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+div[data-ke-type="source"] .source-content {
+	overflow: auto;
+	max-height:300px;
+}
+div[data-ke-type="source"] .source-content-inner {
+	font-size: 14px;
+	padding: 15px;
+	border-radius: 3px;
+	font-family: Menlo, Consolas, Monaco, monospace;
+	overflow: auto;
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+
+blockquote[data-ke-style='normal'] {
+    border-color: #d0d0d0;
+    border-width: 0 0 0 4px;
+    border-style: solid;
+    padding: 1px 0 0 12px;
+    color: #666;
+    line-height: 18pt;
+    font-size: 11pt;
+    text-align: left;
+}
+
+blockquote[data-ke-style='box'] {
+    border: 1px solid #dddddd !important;
+    background-color: #fcfcfc;
+    text-align: left;
+    padding: 21px 25px 20px 25px;
+    color: #666;
+    line-height: 18pt;
+}
+
+
+figure[data-ke-type="revenue"].ad-wp {
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 90px;
+    margin: 0 auto;
+    border: 1px solid #ebebeb;
+}
+
+figure[data-ke-type="revenue"][data-ad-vendor="adsense"].ad-wp {
+    background-image: url(//t1.daumcdn.net/tistory_admin/static/revenue/adsense.svg);
+}
+
+figure[data-ke-type="revenue"][data-ad-vendor="adfit"].ad-wp {
+    background-image: url(//t1.daumcdn.net/tistory_admin/static/revenue/adfit.svg);
+}
+
+figure[data-ke-type="revenue"][data-ad-vendor="dable"].ad-wp {
+    background-image: url(//t1.daumcdn.net/tistory_admin/static/revenue/dable.png);
+}
+
+figure[data-ke-type="revenue"][data-ad-vendor="tenping"].ad-wp {
+    background-image: url(//t1.daumcdn.net/tistory_admin/static/revenue/tenping.png);
+}
