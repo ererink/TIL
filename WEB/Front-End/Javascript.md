@@ -75,7 +75,7 @@ Document는 문서 한 장(HTML)에 해당하고 이를 조작하는 것이다.
 
 ![DOM 객체의 상속 구조.png](./WEB.assets/DOM%20%EA%B0%9D%EC%B2%B4%EC%9D%98%20%EC%83%81%EC%86%8D%20%EA%B5%AC%EC%A1%B0.png)
 
-image from velog.io/@niyu
+(image from velog.io/@niyu)
 
 
 
