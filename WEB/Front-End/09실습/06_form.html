@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="JoinService" method="post">
+    <!-- <tr>
+      <td>ID</td>
+      <td><input type="text" name="id"></td>
+    </tr> -->
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="password" id="password"></td>
+    </tr>
+    <tr>
+      <td>Check Your Password</td>
+      <td colspan="2">
+        <input type="password" name="password_confirmation" id="password_confirmation">
+      </td>
+    </tr>
+    <input type="button" onclick="test()" value="Sign Up">
+  </form>
+  
+  <script type="text/javascript">
+    function test() {
+      let p1 = document.getElementById('password').value;
+      let p2 = document.getElementById('password_confirmation').value;
+
+      if(p1.length < 8) {
+              alert('비밀번호는 8자 이상이어야 합니다.');
+              return false;
+          }
+
+      if( p1 != p2 ) {
+        alert("비밀번호가 일치 하지 않습니다");
+        return false;
+      } else{
+        alert("비밀번호가 일치합니다");
+        return true;
+      }
+
+    }
+  </script>
+  
+</body>
+</html>
