@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 import random
 
@@ -22,3 +23,13 @@ def today_dinner(request):
     }
 
     return render(request, 'today_dinner.html', context)
+
+def lotto(request):
+
+    # pick = random.sample(range(1, 46), 6)
+
+    # context = {
+    #     'pick': pick
+    # }
+
+    return render(request, 'lotto.html')
