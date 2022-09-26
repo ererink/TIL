@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form action="/lorem2" method="GET">
+    <div class="m-3">
+        <p class="fw-bold">문단의 수</p>
+        <input type="text" name="number1">
+    </div>
+    <div class="m-3">
+        <p class="fw-bold">문단별 단어의 수</p>
+        <input type="text" name="number2">
+    </div>
+    <button class="btn btn-success mx-3" type="submit">생성</button>
+</form>
+
+
+{% endblock %}

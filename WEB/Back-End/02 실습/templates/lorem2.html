@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<h1 class="m-5">텍스트 확인 메세지 </h1>
+{% for i in texts %}
+{% for j in i %}
+{{ j }}
+{% endfor %}
+<hr />
+{% endfor %}
+
+{% endblock %}
