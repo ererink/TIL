@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>당신의 전생은?</h1>
+<!-- random_past2로 넘겨주기 -->
+<form action="/random_past2" method="GET">
+    <p>이름을 입력해주세요.</p>
+    <input type="text" name="ball">
+    <input type="submit">
+</form>
+
+{% endblock %}
