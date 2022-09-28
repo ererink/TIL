@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- create.html이지만 index.html에 보여주는 화면 -->
+
+<body>
+    <form action="{% url 'todos:index' %}">
+        <p>내용: {{ todos.content }}</p>
+        <p>우선순위: {{ todos.priority }}</p>
+        <p>마감기한: {{ todos.deadline }}</p>
+    </form>
+
+</body>
+
+</html>

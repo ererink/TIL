@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center fw-bold">Today To-Do</h1>
+    <form action="{% url 'todos:create' %}">
+        <!-- 할일 적기 -->
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">To-Do</button>
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                aria-describedby="button-addon1" name="content">
+        </div>
+        <!-- 우선 순위 -->
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Priority</label>
+            <select class="form-select" id="inputGroupSelect01" name="priority">
+                <option selected>Choose...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <!-- 마감기한 -->
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Dead-line</button>
+            <input type="date" class="form-control" placeholder="" aria-label="Example text with button addon"
+                aria-describedby="button-addon1" name="deadline">
+        </div>
+        <!-- 할일 추가 버튼 -->
+        <div class="container text-center">
+            <input type="submit" class="btn btn-outline-success">
+        </div>
+    </form>
+
+
+    <!-- 데이터 출력 -->
+    <ul>
+        {% for todo in todos %}
+
+        <li>내용: {{ todo.content }} | 우선순위: {{ todo.priority }} | 마감기한: {{ todo.deadline }}
+            <a href="">
+                [수정]
+            </a>/
+            <a href="{% url 'todos:delete' todo.id %}">
+                [삭제]
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
