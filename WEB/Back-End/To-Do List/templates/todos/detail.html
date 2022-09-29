@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card card-primary border-success m-3">
+            <div class="card-header bg-transparent border-success">
+                <h5 class="card-title text-success fw-bold text-align-center">TO-DO</h5>
+            </div>
+            <div class="card-body">
+                <h3>{{ todo.content }}</h3>
+            </div>
+        </div>
+        <div class="card border-success m-3">
+            <div class="card-header bg-transparent border-success">
+                <h5 class="card-title text-success fw-bold">Priority</h5>
+            </div>
+            <div class="card-body">
+                <h3>{{ todo.priority }}</h3>
+            </div>
+        </div>
+        <div class="card border-success m-3">
+            <div class="card-header bg-transparent border-success">
+                <h5 class="card-title text-success fw-bold">Deadline</h5>
+            </div>
+            <div class="card-body">
+                <h3>{{ todo.deadline }}</h3>
+            </div>
+        </div>
+        <div class="card border-success m-3">
+            <div class="card-header bg-transparent border-success">
+                <h5 class="card-title text-success fw-bold">STATUS</h5>
+            </div>
+            <div class="card-body">
+                {% if todo.completed == False %}
+                <h3>미완료</h3>
+                {% else %}
+                <h3>완료</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 돌아가기 버튼 -->
+    <div class="container text-center">
+        <a type="button" class="btn btn-success px-5" href="{% url 'todos:index' %}"><span
+                class="fw-bold">BACK</span></a>
+    </div>
+</body>
+
+</html>

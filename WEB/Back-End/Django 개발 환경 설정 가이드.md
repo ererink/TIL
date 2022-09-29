@@ -95,7 +95,7 @@ Django      3.2.13
 8. 프로젝트를 시작하기 위해 프로젝트를 생성한다.
 
 ```bash
-$ django-admin startproject firstpjt
+$ django-admin startproject firstpjt .
 ```
 
 Django의 관리자를 불러서 'firstpjt'라는 프로젝트를 시작하겠다고 명령한다. 
@@ -123,9 +123,13 @@ $ code .
 
 server 폴더 안에 fistpjt(프로젝트), server-venv(가상환경), sql 파일, manage 파일이 생성되었다. 
 
+11. App(기능)을 생성한다. 
 
+```bash
+$ python manage.py startapp [app 이름]
+```
 
-11. 서버를 실행시킨다. 
+12. 서버를 실행시킨다. 
 
 ```bash
 $ python manage.py runserver
