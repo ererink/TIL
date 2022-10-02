@@ -1,4 +1,5 @@
 # 두수의 합
+# 투포인터
 
 from curses import start_color
 
