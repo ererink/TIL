@@ -1,0 +1,36 @@
+<!-- base.html을 적용시킨다. -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>게시판</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <!-- 속성 -->
+            <th scope="col">글 번호</th>
+            <th scope="col">글 제목</th>
+            <th scope="col">글 내용</th>
+            <th scope="col">작성 시간</th>
+            <th scope="col">수정 시간</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- posts에 저장한 데이터 불러오기 -->
+        {% for post in posts %}
+        <tr>
+            <th scope="row">{{ post.id }}</th>
+            <!-- 글 제목을 누르면 상세 페이지로 넘어가기 -->
+            <td><a href="{% url 'appp:detail' post.pk %}">{{ post.title }}</a></td>
+            <td>{{ post.created_at }}</td>
+            <td>{{ post.updated_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- 글쓰기 버튼  -->
+<!-- create로 넘어가기 -->
+<a href="{% url 'appp:create' %}">글쓰기</a>
+
+{% endblock content %}

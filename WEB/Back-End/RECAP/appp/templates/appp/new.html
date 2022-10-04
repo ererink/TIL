@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>글쓰기</h1>
+
+<!-- POST == 서버에 전송한다. -->
+<form action="{% url 'appp:create' %}" method="POST">
+    <!-- 요청 시 보안을 위한 로직 -->
+    {% csrf_token %}
+    <!-- p 태그로 감싸져있도록 한다 -->
+    {{ appp_form.as_p }}
+
+    <input type="submit" value="글쓰기">
+</form>
+{% endblock content %}

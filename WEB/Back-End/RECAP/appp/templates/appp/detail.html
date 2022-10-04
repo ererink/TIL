@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ post.pk }}</h1>
+<p>{{ post.created_at }} | {{ post.updated_at }}</p>
+<p>{{ post.content }}</p>
+<a href="{% url 'appp:update' post.pk %}">수정하기</a>
+<a href="{% url 'appp:index' %}">돌아가기</a>
+{% endblock content %}
