@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center m-5 fw-bold">New Posting</h1>
+<!-- 어떤 필드(name, value)로 어디로(action, method) 보낼건지 고려한다 -->
+<!-- GET == 제공, 조회 POST == 데이터 처리, 저장, 보내기 -->
+<div class="container">
+    <form action="{% url 'articles:create' %}" method="POST">
+        {% csrf_token %}
+        <!-- forms.py를 통해 불러온 데이터를 p 태그로 감싸기 -->
+        {{ article_form.as_p }}
+        <input type="submit" value="수정">
+    </form>
+</div>
+
+
+
+{% endblock content %}

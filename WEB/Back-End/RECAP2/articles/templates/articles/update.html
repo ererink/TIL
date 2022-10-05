@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center fw-bold m-5">Update Posting</h1>
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ article_form.as_p }}
+        <button class="btn btn-success" type="submit" value="수정">
+            Update
+        </button>
+
+    </form>
+</div>
+
+{% endblock content %}

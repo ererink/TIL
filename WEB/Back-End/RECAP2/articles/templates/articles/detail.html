@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 해당pk의 글 보여주기 -->
+<div class="container">
+    <h6 class="text-center m-5">{{ article.pk }}</h6>
+    <h1 class="text-center fw-bold">{{ article.title }}</h1>
+    <p class="text-center">{{ article.content }}</p>
+    <p class="text-center">{{ article.created_at }} | {{ article.updated_at }}</p>
+</div>
+
+<div class="container">
+    <!-- 수정 버튼 -->
+    <button class="btn btn-success" type="button"
+        onclick="location.href='{% url 'articles:update' article.pk %}'">UPDATE
+    </button>
+    <!-- 삭제 버튼 -->
+    <button class="btn btn-success" type="button"
+        onclick="location.href='{% url 'articles:delete' article.pk %}'">DELETE
+    </button>
+    <!-- 돌아가기 버튼 -->
+    <button class="btn btn-success" type="button" onclick="location.href='{% url 'articles:index' %}'">BACK
+    </button>
+
+</div>
+
+
+
+{% endblock content %}

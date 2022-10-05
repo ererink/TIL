@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 class="text-center m-5 fw-bold">Notice Board</h1>
+<div class="container">
+    <!-- 글쓰기 버튼 -->
+    <button class="btn btn-success" type="button" onclick="location.href='{% url 'articles:create' %}'">Create New Post
+    </button>
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- 테이블 속성 -->
+                <th scope="col">#</th>
+                <th scope="col">TITLE</th>
+                <th scope="col">CONTENT</th>
+                <th scope="col">CREATED TIME</th>
+                <th scope="col">UPDATED TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 불러온 데이터를 반복문으로 보여주기 -->
+            {% for article in articles %}
+            <tr>
+                <th scope="row">{{ article.id }}</th>
+                <td><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></td>
+                <td>{{ article.content }}</td>
+                <td>{{ article.created_at }}</td>
+                <td>{{ article.updated_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<img src="{% static 'images/img1.jpg' %}" alt="pink sky">
+
+{% endblock content %}
