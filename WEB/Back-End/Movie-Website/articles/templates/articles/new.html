@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- 네비바 -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-3 fw-bold">LOGO</a>
+      <div class="d-flex mx-3">
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" href="#">About</a>
+        </li>
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" href="#">Members</a>
+        </li>
+        <li class="nav-item list-unstyled mx-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-circle" viewbox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </li>
+        <li class="nav-item list-unstyled">
+          <a class="nav-link text-white">Log In</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <h1 class='text-center fw-bold m-5'>New Movie</h1>
+  <div class='container'>
+    <form action="{% url 'articles:create' %}" method='POST'>
+      {% csrf_token %}
+      {{ article_form.as_p }}
+      <input type='submit' value='Update'>
+    </form>
+  </div>
+
+{% endblock content %}
