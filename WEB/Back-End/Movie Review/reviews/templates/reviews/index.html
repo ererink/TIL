@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container'>
+  <form class="d-flex" action="{% url 'reviews:search'%}">
+    <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
+    <button class="btn btn-outline-warning" type="submit">Search</button>
+  </form>
+</div>
+  <h1 class='text-center fw-bold m-5'>Movie Review Community</h1>
+
+  <!-- 테이블 -->
+  <div class='container'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th scope='col'>#</th>
+          <th scope='col'>Title</th>
+          <th scope='col'>Content</th>
+          <th scope='col'>Name of a movie</th>
+          <th scope='col'>Grade</th>
+          <th scope='col'>Created Time</th>
+          <th scope='col'>Updated Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for review in reviews %}
+          <tr>
+            <th scope='row'>{{ review.id }}</th>
+            <td>
+              <a href='{% url 'reviews:detail' review.pk %}'>{{ review.title }}</a>
+            </td>
+            <td>{{ review.content }}</td>
+            <td>{{ review.movie_name }}</td>
+            <td>{{ review.grade }}</td>
+            <td>{{ review.created_at }}</td>
+            <td>{{ review.updated_at }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+{% endblock content %}

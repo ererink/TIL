@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class='text-center fw-bold m-5'>Update Review</h1>
+  <div class='container text-center'>
+    <form action='' method="POST">
+      {% csrf_token %}
+      {{ review_form.as_p }}
+      <button class="btn btn-dark" type="submit" value="수정">
+        Update
+      </button>
+    </form>
+  </div>
+
+{% endblock content %}

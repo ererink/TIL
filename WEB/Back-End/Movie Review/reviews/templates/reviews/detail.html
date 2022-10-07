@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container text-center m-5'>
+    <h1>{{ review.title }}</h1>
+    <h3>{{ review.movie_name }}</h3>
+    <p>{{review.grade}}</p>
+    <h6>{{ review.content }}</h6>
+</div>
+<div class="container text-center">
+    <!-- 수정 버튼 -->
+    <button class="btn btn-dark" type="button" onclick="location.href='{% url 'reviews:update' review.pk %}'">UPDATE
+    </button>
+    <!-- 삭제 버튼 -->
+    <button class="btn btn-danger" type="button" onclick="location.href='{% url 'reviews:delete' review.pk %}'">DELETE
+    </button>
+    <!-- 돌아가기 버튼 -->
+    <button class="btn btn-dark" type="button" onclick="location.href='{% url 'reviews:index' %}'">BACK
+    </button>
+  </div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class='text-center fw-bold m-5'>New Review</h1>
+<div class='container'>
+    <form action="{% url 'reviews:create' %}" method='POST'>
+      {% csrf_token %}
+      {{ review_form.as_p }}
+      <input type='submit' value='Update'>
+    </form>
+  </div>
+
+
+{% endblock content %}

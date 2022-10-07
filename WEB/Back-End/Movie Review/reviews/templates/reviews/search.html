@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% if search == 1 %}
+        <h1 class='mt-5 text-center'>검색 결과가 없습니다.</h1>
+    {% else %}
+        <table class="table mt-5">
+        <thead>
+            <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Created Time</th>
+            <th scope="col">Updated Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in search %}
+            <tr>
+                <td>
+                <a href="{%url 'reviews:detail' review.pk%}">{{review.title}}</a>
+                </td>
+                <td>{{review.created_at}}</td>
+                <td>{{review.updated_at}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
