@@ -29,7 +29,7 @@ from collections import deque
 input = sys.stdin.readline
 
 
-dx = [0, 0, 1, -1] # 우 좌 하 상
+dx = [0, 0, 1, -1] # 우 좌 하 상     
 dy = [1, -1, 0, 0]
 
 
