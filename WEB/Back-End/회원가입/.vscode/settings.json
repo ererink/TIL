@@ -1,0 +1,14 @@
+"files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "unibeautify.enabled": true,
+  "[django-html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Glavin001.unibeautify-vscode"
+  }

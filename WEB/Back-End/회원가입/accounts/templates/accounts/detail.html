@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container text-center m-5'>
+    <h1 class='mb-3 fw-bold'>{{ user.username }}님의 프로필</h1>
+    <p>name: {{ user.username }}</p>
+    <p>email: {{ user.email}}</p>
+</div>
+
+{% endblock content %}
