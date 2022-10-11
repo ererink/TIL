@@ -33,17 +33,18 @@ dx = [0, 0, 1, -1] # 우 좌 하 상
 dy = [1, -1, 0, 0]
 
 
-def bfs(a, b):
-    queue = deque()
-    queue.append((a, b)) # 튜플
-    visit[a][b] = True
+def bfs(a, b):                     
+    queue = deque()                 
+    queue.append((a, b)) # 튜플       queue = [(0, 0)]   현재위치 
+    visit[a][b] = True          
 
-    while queue: # 큐가 빌 때 까지
-        x, y = queue.popleft()
-
+    while queue: # 큐가 빌 때 까지      
+        x, y = queue.popleft()       # x, y = [(0, 0)]  현재위치
+                                    # x == 0, y == 0
         for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
+            nx = x + dx[i]          # next x, next y 즉, 탐색을 해줄 방향 지시
+                                    # (x) 0 + (dx)0 = 0
+            ny = y + dy[i]          # (x) 0 + (dx)1 = 1
 
             if 0 <= nx < n and 0 <= ny < m and not visit[nx][ny]:
                 if maps[nx][ny] == 1:
@@ -68,4 +69,5 @@ for i in range(t):
             if maps[k][v] == 1 and not visit[k][v]:
                 bfs(k, v)
                 cnt += 1
+
     print(cnt)
