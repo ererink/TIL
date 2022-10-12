@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+<div class='container text-center m-5'>
+    <h1 class='mb-3 fw-bold m-3'>{{ user.username }}님의 프로필</h1>
+    <p>name: {{ user.username }}</p>
+    <p>email: {{ user.email}}</p>
+</div>
+<div class='container text-center'>
+    <button class="btn btn-dark" type="button" onclick="location.href='{% url 'accounts:index' %}'">
+        BACK
+    </button>
+</div>
+{% endblock body %}
