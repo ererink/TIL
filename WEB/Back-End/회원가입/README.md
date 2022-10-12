@@ -1,5 +1,8 @@
-![회원가입](./movie.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.mp4)
-![회원목록](./movie.assets/%ED%9A%8C%EC%9B%90%EB%AA%A9%EB%A1%9D.mp4)
+# 회원가입
+![회원가입](./movie.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
+
+# 회원목록
+![회원목록](./movie.assets/%ED%9A%8C%EC%9B%90%EB%AA%A9%EB%A1%9D.gif)
 ## 목표
 
 Django **Auth**를 활용한 회원가입이 가능한 서비스를 개발합니다.
