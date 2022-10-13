@@ -5,11 +5,11 @@
 ![회원가입](./accounts.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
 
 # 로그인 및 로그아웃
-![로그인](./accounts.assets/%EB%A1%9C%EA%B7%B8%EC%9D%B8.gif)
+![로그인](./accounts.assets/%EB%A1%9C%EA%B7%B8%EC%9D%B8.gif)<br>
 네비게이션 바의 이름을 누르면 회원정보 페이지로 넘어갑니다.
 
 # 회원 목록
-![회원목록](./accounts.assets/%ED%9A%8C%EC%9B%90%EB%AA%A9%EB%A1%9D.gif)
+![회원목록](./accounts.assets/%ED%9A%8C%EC%9B%90%EB%AA%A9%EB%A1%9D.gif)<br>
 회원 이름을 누르면 회원정보 페이지로 넘어갑니다. 
 
 
