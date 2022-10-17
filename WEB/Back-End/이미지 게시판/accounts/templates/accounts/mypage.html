@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1>{{ user.last_name }}{{ user.first_name }}
+      님의 프로필</h1>
+    <hr>
+    <p>이름 :
+      {{ request.user.last_name }}{{ request.user.first_name }}</p>
+    <p>이메일 :
+      {{ request.user.email }}</p>
+    <button class="btn btn-outline-dark float-end" type="button" onclick="location.href='{% url 'accounts:update' %}'">
+      수정
+    </button>
+  </div>
+{% endblock content %}

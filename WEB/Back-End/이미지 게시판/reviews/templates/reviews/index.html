@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="my-5 text-center">리뷰 목록</h1>
+    <div class="row text-center mt-5">
+      <div class="col-2 fs-4 fw-bold">#</div>
+      <div class="col-3 fs-4 fw-bold">title</div>
+      <div class="col-3 fs-4 fw-bold">content</div>
+      <div class="col-2 fs-4 fw-bold">작성자</div>
+      <div class="class col-2"></div>
+    </div>
+    <hr>
+    {% for review in reviews %}
+      <div class="row">
+        <div class="d-flex col-2 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ review.pk }}</p>
+        </div>
+        <div class="d-flex col-3 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ review.title }}</p>
+        </div>
+        <div class="d-flex col-3 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ review.content }}</p>
+        </div>
+        <div class="d-flex col-2 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ review.user_name }}</p>
+        </div>
+        <div class='col-2'>
+          <a class="btn btn-outline-dark" href="{% url 'reviews:detail' review.pk %}">상세보기</a>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+
+  {% endblock content %}

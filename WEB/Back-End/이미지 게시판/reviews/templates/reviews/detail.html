@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1 class='my-5'>
+      {{ review.movie_name }}
+    </h1>
+    <hr>
+    <h5 class="my-5">
+      평점 :
+      {{ review.grade }}점</h5>
+    <div class='my-5'>
+      <div class='d-flex justify-content-between'>
+        <p>제목 :
+          {{ review.title }}
+        </p>
+        <p>생성시간 :
+          {{ review.created_at }}
+        </p>
+      </div>
+      <div class='d-flex justify-content-between'>
+        <p>내용 :
+          {{ review.content }}
+        </p>
+        <p>수정시간 :
+          {{ review.updated_at }}
+        </p>
+      </div>
+      <img src="{{ review.image.url }}" alt="{{ review.image }}" width="300" height="150">
+    </div>
+    <div class="d-flex justify-content-end">
+      <a class='mx-3' href="{% url 'reviews:update' review.pk %}"><input type="submit" class="btn btn-warning " value="수정"></a>
+      <form action="{% url 'reviews:delete' review.pk %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">
+          삭제
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

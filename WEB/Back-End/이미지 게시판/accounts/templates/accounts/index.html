@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="text-center my-5">회원목록</h1>
+    <div class="row text-center mt-5">
+      <div class="col-2 fs-4 fw-bold">#</div>
+      <div class="col-4 fs-4 fw-bold">username</div>
+      <div class="col-4 fs-4 fw-bold">email</div>
+      <div class="class col-2"></div>
+    </div>
+    <hr>
+    {% for user in users %}
+      <div class="row">
+        <div class="d-flex col-2 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ user.pk }}</p>
+        </div>
+        <div class="d-flex col-4 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ user.username }}</p>
+        </div>
+        <div class="d-flex col-4 align-items-center justify-content-center">
+          <p class="text-center my-0">{{ user.email }}</p>
+        </div>
+        <div class='col-2'>
+          <a class="btn btn-outline-dark" href="{% url 'accounts:detail' user.pk %}">프로필</a>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+
+  {% endblock content %}

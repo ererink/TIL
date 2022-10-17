@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="container my-2">
+    <h1 class="my-5">리뷰 작성</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% bootstrap_form review_form %}
+      <input class="btn btn-outline-dark float-end" type="submit" value="리뷰 생성">
+    </form>
+  </div>
+
+{% endblock content %}

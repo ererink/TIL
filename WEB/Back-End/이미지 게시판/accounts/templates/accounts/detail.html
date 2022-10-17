@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class='container my-5'>
+    <h1>
+      {{ user.username }}님의 프로필
+    </h1>
+    <hr>
+    <p>
+      이름 :
+      {{ user.last_name }}{{ user.first_name }}
+    </p>
+    <p>
+      이메일 :
+      {{ user.email }}
+    </p>
+    <a class='btn btn-outline-dark float-end' href="{% url 'accounts:index' %}">돌아가기</a>
+  </div>
+{% endblock content %}

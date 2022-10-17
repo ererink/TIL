@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="container">
+    <div class="my-5">
+      {% if request.resolver_match.url_name == 'change_password' %}
+        <h1>비밀번호 변경</h1>
+      {% elif request.resolver_match.url_name == 'login'%}
+        <h1>로그인</h1>
+      {% elif request.resolver_match.url_name == 'update'%}
+        <h1>회원정보 수정</h1>
+      {% elif request.resolver_match.url_name == 'signup'%}
+        <h1>회원가입</h1>
+      {% endif %}
+    </div>
+    <form action='' method='POST'>
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <input class="btn btn-outline-dark float-end" type="submit">
+    </form>
+  </div>
+{% endblock content %}
