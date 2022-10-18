@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class='container text-center m-5'>
+    <button class='btn btn-dark px-3' type="button" onclick="location.href='{% url 'accounts:signup' %}'">
+        Signup
+    </button>
+    <button class='btn btn-dark px-3' type="button" onclick="location.href='{% url 'accounts:members' %}'">
+        Member List
+    </button>
+</div>
+{% endblock body %}

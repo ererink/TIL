@@ -1,0 +1,59 @@
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <title>Accounts</title>
+  {% block css %}{% endblock css %}
+</head>
+<body>
+ <!-- 네비바 -->
+ <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-3" href='{% url 'accounts:index' %}'>LOGO</a>
+      <div class="d-flex mx-3">
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" href="#">About</a>
+        </li>
+        <li class="nav-item list-unstyled mx-3">
+          <a class="nav-link active text-white" href="#">Members</a>
+        </li>
+        <li class="nav-item list-unstyled mx-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-circle" viewbox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </li>
+
+        {% if request.user.is_authenticated %}
+          <li class="nav-item list-unstyled mx-2">
+            <a class="nav-link text-white" href="{% url 'accounts:detail' user.pk %}">{{ request.user }}</a> 
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link text-white" href="{% url 'accounts:logout' %}">Log Out</a>
+          </li>
+          {% else %}
+          <li class="nav-item list-unstyled mx-2">
+            <a class="nav-link text-white" href="{% url 'accounts:signup' %}">Signup</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link text-white" href="{% url 'accounts:login' %}">Log in</a>
+          </li>
+        {% endif %}
+        </div>
+    </div>
+  </nav>
+  {% block body %}
+   
+  {% endblock body %}
+
+</body>
+
+</html>
