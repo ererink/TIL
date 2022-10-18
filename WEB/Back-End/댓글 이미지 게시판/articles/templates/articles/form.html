@@ -10,7 +10,7 @@
     <h1> 수정하기 </h1>
     {% endif %}
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form article_form %}
     {% bootstrap_button button_type="submit" content="OK" %}

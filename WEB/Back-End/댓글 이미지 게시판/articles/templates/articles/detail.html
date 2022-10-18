@@ -8,12 +8,21 @@
     <p>{{ article.pk }}번 게시글</p>
     <p>{{ article.content }} </p>
 
-    <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+    {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+    {% endif %}
+
+    <a href="{% url 'articles:update' article.pk %}">Update</a>
     <h4 class="my-3">Comments</h4>
     <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
         {% csrf_token %}
         {% bootstrap_form comment_form %}
         {% bootstrap_button button_type="submit" content="OK" %}
+        <button class="btn btn-dark" type="button" onclick="location.href='{% url 'articles:index' %}'">
+            BACK
+        </button>
+        <button class="btn btn-dark" type="button" onclick="location.href='{% url 'articles:delete' article.pk %}'">DELETE
+    </button>
     </form>
     <hr>
     {% for comment in comments %}
