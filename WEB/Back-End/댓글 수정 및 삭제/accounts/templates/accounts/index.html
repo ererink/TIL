@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class='container text-center m-5'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th scope='col'>#</th>
+          <th scope='col'>username</th>
+          <th scope='col'>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for member in members %}
+          <tr>
+            <th scope='row'>{{ member.id }}</th>
+            <td>
+              <a href='{% url 'accounts:detail' member.pk %}'>{{ member.username }}</a>
+            </td>
+            <td>{{ member.email }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock body %}

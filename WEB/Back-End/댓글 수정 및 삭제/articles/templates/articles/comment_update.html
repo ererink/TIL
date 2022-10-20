@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %} 
+<form action="{% url 'articles:comments_update' article.pk comment.pk %}" method="POST" class="m-0">
+    {% csrf_token %}
+    {% bootstrap_form comment_form %}
+    <button class="btn btn-outline-primary float-end align-middle p-1 px-2" type="submit">O</button>        
+</form>
+{% endblock %}

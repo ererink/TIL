@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+<div class='container text-center m-5'>
+    <h1 class='mb-3 fw-bold m-3'>{{ user.username }}님의 프로필</h1>
+    <p>name: {{ user.username }}</p>
+    <p>email: {{ user.email}}</p>
+</div>
+
+<!-- 사용자가 쓴 글 목록 -->
+<div class='container m-5'>
+    <h3>작성한 글</h3>
+    <p class="">{{ user.article_set.count }}개의 게시글을 작성하였습니다.</p>
+    {% for article in user.article_set.all %}
+    <p>
+        {{ forloop.counter }}
+        <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    </p>
+    {% endfor %}
+</div>
+
+<!-- 사용자가 쓴 댓글 목록 -->
+<div class='container m-5'>
+    <h3>작성한 댓글</h3>
+    <p class="text-muted">{{ user.comment_set.count }}개의 댓글을 작성하였습니다.</p>
+    {% for comment in user.comment_set.all %}
+    <p>
+        {{ forloop.counter }}
+        <a href="{% url 'articles:detail' comment.article_id %}">{{ comment.content }}</a>
+    </p>
+    {% endfor %}
+</div>
+
+<div class='container text-center m-5'>
+    <button class="btn btn-dark" type="button" onclick="location.href='{% url 'accounts:index' %}'">
+        BACK
+    </button>
+    <button class="btn btn-outline-primary" type="button" onclick="location.href='{% url 'accounts:update' %}'">
+        Update Profile
+    </button>
+
+</div>
+{% endblock body %}
