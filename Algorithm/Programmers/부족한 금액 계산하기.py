@@ -10,4 +10,5 @@ def solution(price, money, count):
     else:
         answer = 0
     
+    
     return answer
