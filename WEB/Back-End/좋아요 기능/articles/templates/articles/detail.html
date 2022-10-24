@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %} 
+<div class="container m-5">
+    <!-- 게시글 내용 -->
+    <div class='card text-bg-light mb-3 p-3'>
+        <h1 class='fw-bold'>{{ article.title }}</h1>
+        <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }} | {{ article.updated_at|date:"y-m-d D" }}</p>
+        <p>{{ article.pk }}번 게시글</p>
+        <h3><a class='text-decoration-none' href="{% url 'accounts:detail' article.user.pk %}">{{ article.user.username }}</a></h3>
+        <hr>
+        <p class='mt-3'>{{ article.content }} </p>
+    </div>
+    <div class='container mt-3 mb-3'>
+        <!-- 좋아요 -->
+        {% if request.user.is_authenticated %}
+            <a class="like-heart" href="{% url 'articles:like' article.pk %}">
+            {% if request.user in article.like_users.all %}
+                <i class="bi bi-heart-fill"></i>
+            {% else %}
+                <i class="bi bi-heart"></i>
+            {% endif %}</a>{{ article.like_users.count }}</span>
+        {% endif %}
+    </div>
+    <!-- 이미지 -->
+    <div class='container'>
+        {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+        {% endif %}
+    </div>
+
+    <!-- 버튼 -->
+    <div class='float-end'>
+        {% if request.user == article.user %}
+            <button class="btn btn-dark" type="button" onclick="location.href='{% url 'articles:update' article.pk %}'">
+                Update
+            </button>
+        {% endif %}
+        <button class="btn btn-dark" type="button" onclick="location.href='{% url 'articles:index' %}'">
+            BACK
+        </button>
+        <button class="btn btn-danger" type="button" onclick="location.href='{% url 'articles:delete' article.pk %}'">
+            DELETE
+        </button>
+    </div>
+    <hr>
+
+    <!-- 댓글 쓰기 Form-->
+    <h4 class="my-3">Comments</h4>
+    <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form comment_form %}
+        {% bootstrap_button button_type="submit" content="OK" %}
+    </form>
+    <hr>
+
+    <!-- 댓글 목록 -->
+    {% for comment in comments %}
+        <p>{{ comment.user }} | {{ comment.content }}</p>
+        <hr>    
+    {% empty %}
+        <p>댓글이 없습니다!</p>
+    {% if request.user == comment.user %}
+        <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-outline-danger" type="submit" onclick="location.href='{% url 'articles:delete' article.pk %}'">
+            DELETE
+        </button>        
+        </form>
+    {% endif %}
+
+    {% endfor %}
+</div>
+{% endblock %}
