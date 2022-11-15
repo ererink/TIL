@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style_3.css" />
+    <link href="{% static 'css/hover.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <title>브로컬리🥦</title>
+  </head>
+<body>
+    <!-- Navbar -->
+    <!-- 최상단 Navbar -->
+    <nav class="navbar pt-3 pe-5 me-5">
+        <div class="container d-felx justify-content-end">
+            {% if request.user.is_authenticated %}
+            <a class="text-decoration-none text-dark" aria-current="page" href="{% url 'accounts:mypage' %}"><small>마이페이지</small></a>
+            <p class="mb-0 mx-3 text-lightgreen opacity-50">|</p>
+            <a class="text-decoration-none text-dark" href="{% url 'accounts:logout' %}"><small>로그아웃</small></a>
+            {% else %} 
+            <a class="text-decoration-none text-green" aria-current="page" href="{% url 'accounts:agreement' %}"><small>회원가입</small></a>
+            <p class="mb-0 mx-3 text-lightgreen opacity-50">|</p>
+            <a class="text-decoration-none text-dark" href="{% url 'accounts:login' %}"><small>로그인</small></a>
+            {% endif %}
+            <p class="mb-0 mx-3 text-lightgreen opacity-50">|</p>
+            <a class="text-decoration-none text-dark" href="#" style="padding-right: 3.3rem;"><small>고객센터</small></a>
+        </div>
+    </nav>
+    <!-- 중간 Navbar -->
+    <nav class="navbar p-0">
+        <div class="container d-flex justify-content-around">
+            <a class="d-flex align-items-center text-decoration-none" href="{% url 'root' %}">
+                <p class="logo text-green me-4 mb-1" style="margin-left: 1.5rem">BroKurly</p>
+                <p class="text-green fs-5 mb-0">브로컬리</p>
+            </a>
+            <form class="nav-searchbar text-green" role="search" action="{% url 'products:search' %}" method="post" >
+                {% csrf_token %}
+                <input class="form-control me-2" style="width: 24rem; height: 3.5rem;" type="search" placeholder="검색어를 입력해주세요" aria-label="Search"  name="q" value="{{q}}">
+                <a  type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#008b47" class="bi bi-search mt-2 me-1" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </a>
+            </form>
+            <!-- 아이콘 -->
+            <ul class="d-flex mb-0" style="padding-right: 2.5rem;">
+                <li class="list-unstyled mx-3">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt black-green" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>                
+                    </a>
+                </li>
+                <li class="list-unstyled mx-3">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart black-green" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                        </svg>                
+                    </a>
+                </li>
+                <li class="list-unstyled ms-3">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="bi bi-cart2 black-green" viewBox="0 0 16 16">
+                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                        </svg>              
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>  
+    <!-- 하단 Navbar -->
+    <nav class="navbar nav-shadow py-3">
+        <div class="container d-flex justify-content-around">
+            <li class="nav-item m-0 list-unstyled drop-down">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                카테고리
+                </a>
+                <ul class="dropdown-content">
+                    <a class="" href="#">Action</a>
+                    <a class="" href="#">Another action</a>
+                    <a class="" href="#">Something else here</a>
+                </ul>
+            </li>
+            <li class="black-lightgreen list-unstyled hvr-underline-from-center">
+                <a class="nav-link active" href="#">신상품</a>
+            </li>
+            <li class="black-lightgreen list-unstyled hvr-underline-from-center">
+                <a class="nav-link active" href="#">베스트</a>
+            </li>
+            <li class="black-lightgreen list-unstyled hvr-underline-from-center">
+                <a class="nav-link active" href="#">알뜰쇼핑</a>
+            </li>
+            <li class="black-lightgreen list-unstyled hvr-underline-from-center">
+                <a class="nav-link active" href="#">특가/혜택</a>
+            </li>
+        </div>
+    </nav>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
