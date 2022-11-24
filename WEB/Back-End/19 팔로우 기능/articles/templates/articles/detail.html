@@ -66,9 +66,7 @@
     {% if request.user == comment.user %}
         <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
         {% csrf_token %}
-        <button class="btn btn-outline-danger" type="submit" onclick="location.href='{% url 'articles:delete' article.pk %}'">
-            DELETE
-        </button>        
+        {% bootstrap_button button_type="submit" content="SUBMIT" %}      
         </form>
     {% endif %}
 
