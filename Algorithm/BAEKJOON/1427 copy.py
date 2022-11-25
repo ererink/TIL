@@ -21,7 +21,6 @@ for i in lis:
     for j in i:
         lis2.append(j)
 
-lis2.sor
-t(reverse=True)
+lis2.sort(reverse=True)
 b = "".join(lis2) 
 print(b)
