@@ -14,7 +14,9 @@ a = input()
 lis=[]
 lis2=[]
 
-lis.append(a)
+
+
+
 for i in lis:
     for j in i:
         lis2.append(j)
