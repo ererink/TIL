@@ -11,19 +11,35 @@
 0
 '''
 
-K = int(input())
+# K = int(input())
 
-input_list = []
+# input_list = []
 
-for _ in range(K):
-    input_list.append(int(input())) 
+# for _ in range(K):
+#     input_list.append(int(input())) 
 
-stack = []
+# stack = []
 
-for elem in input_list:
-    if elem != 0:
-        stack.append(elem)
+# for elem in input_list:
+#     if elem != 0:
+#         stack.append(elem)
+#     else:
+#         stack.pop
+
+# print(sum(stack))
+
+n = int(input())
+
+check = []
+for _ in range(n):
+    num = int(input())
+    if num == 0:
+        check.pop()
     else:
-        stack.pop
+        check.append(num)
 
-print(sum(stack))
+total = 0
+for i in check:
+    total += i
+
+print(total)
