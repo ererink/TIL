@@ -59,11 +59,11 @@ while max(map(max, maps)):
                             if iceberg[nx][ny] != 0 and not visit[nx][ny]:
                                 visit[nx][ny] = True
                                 queue.append((nx, ny))
-    
+
     if year == 0 and land >= 2:
         print(year)
         break
-
+    # 조건이 충족되지 않으면 다시 while문 반복
     year += 1  
                               
     if land >= 2:
