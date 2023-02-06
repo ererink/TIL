@@ -7,7 +7,6 @@ MAX = 100001
 
 n, m = map(int, input().split())
 
-maps = [[] for _ in range(n)]
 visited = [INF] * (MAX)
 visited[n] = 0
 
@@ -23,7 +22,9 @@ while heap:
         break
     
     for j in (x - 1, x + 1, x * 2):
-        if 0 <= j < MAX and visited[j] == INF:
+
+        # 최소비용으로 또 다시 방문할 수 있기 때문에 'visited[j] == INF'의 구문은 포함시키지 않는다 (방문하지 않았다의 의미로 사용해선 안된다)
+        if 0 <= j < MAX:
             # 최단경로를 찾기 때문에 * 2는 경로 측정에 포함하지 않는다.
             if j == x * 2:
                 min_cost = cost
