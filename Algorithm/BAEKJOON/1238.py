@@ -22,7 +22,7 @@ for _  in range(m):
 
 def party(p, board):
     heap = []
-    heappush(heap, (0, p))
+    heappush(heap, (0, p))      # 시작점(파티장소) 할당
     
     visited = [INF] * n
     visited[p] = 0
@@ -42,13 +42,13 @@ def party(p, board):
 
     return visited
 
-# 함수실행 => 도착점이자 시작점인 노드와 길 정보가 있는 그래프 할당
-visit = party(p, maps)
-rev_visit = party(p, rev_maps)      # 돌아갈때 걸리는 시간도 방문리스트로 측정해준다.
+# 함수실행 => 시작점이자 도착점인 노드와 길 정보가 있는 그래프 할당
+visit = party(p, maps)              # 파티장소(p)에서 집으로 돌아가는 시간 측정
+rev_visit = party(p, rev_maps)      # 집에서 파티장소로 가는 시간 측정
 
 far = 0
 for i in range(n):
-    # 갈때 걸리는 시간 + 돌아갈때 걸리는 시간
+    # 돌아갈때 걸리는 시간 + 갈때 걸리는 시간
     distance = visit[i] + rev_visit[i]
     
     # 걸리는 시간이 더 큰 수 찾아내기
