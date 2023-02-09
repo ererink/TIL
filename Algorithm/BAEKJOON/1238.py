@@ -9,8 +9,8 @@ INF = sys.maxsize
 n, m, p = map(int, input().split())
 p -= 1
 
-maps = [[] for _ in range(n)]
 # 역방향 그래프 생성 => 돌아가는 시간 고려
+maps = [[] for _ in range(n)]
 rev_maps = [[] for _ in range(n)]
 
 for _  in range(m):
