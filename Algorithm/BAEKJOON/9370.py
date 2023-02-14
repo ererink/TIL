@@ -42,9 +42,9 @@ for _ in range(t):
         
         return visited
     
-    case1 = measure(s)      # 입력값으로 주어진 출발지 (기본)
-    case2 = measure(g)      # 지나간 도로
-    case3 = measure(h)      # 지나간 도로2
+    case1 = measure(s)      # 입력값으로 주어진 출발지 (기본)   [0, 6, 8, 12, 11]
+    case2 = measure(g)      # 지나간 도로                      [6, 0, 2, 6, 5]
+    case3 = measure(h)      # 지나간 도로2                     [8, 2, 0, 4, 3]
 
     answer = []
     for i in range(t):
