@@ -33,7 +33,7 @@ for x in range(19):
 
                         print(check)
                         print(x + 1, y + 1)
-                        # sys.exit(0)
+                        sys.exit(0)
                     
                     nx += dx[i]
                     ny += dy[i]
