@@ -31,6 +31,7 @@ def count(x, y):
                 queue.append((nx, ny))
     return cnt
 
+
 answer = []
 for i in range(N):
     for j in range(M):
