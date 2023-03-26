@@ -14,6 +14,14 @@ public class BankService {
         accountList.add(account);
     }
 
+    public void removeAccount(int accountId) {
+        for (AccountDto account : accountList) {
+            if (account.getId() == accountId) {
+                accountList.remove(account);
+            }
+        }
+    }
+
     public List<AccountDto> getAccountList() {
         return accountList;
     }
@@ -28,15 +36,6 @@ public class BankService {
         return balance;
     }
 
-    public boolean withdraw(int accountId, double amount) {
-        for (AccountDto account : accountList) {
-            if (account.getId() == accountId) {
-                return account.withdraw(amount);
-            }
-        }
-        return false;
-    }
-
     public void transfer(int fromAccountId, int toAccountId, double amount) {
         AccountDto fromAccount = null;
         AccountDto toAccount = null;
@@ -49,7 +48,11 @@ public class BankService {
             }
         }
         if (fromAccount != null && toAccount != null) {
-            fromAccount.transfer(toAccount, amount);
+            if (fromAccount instanceof SavingAccount) {
+                SavingAccount fromSavingAccount = (SavingAccount) fromAccount;
+                double transferFee = fromSavingAccount.getTransferFee();
+                amount += transferFee;
+            }
         }
     }
 }
