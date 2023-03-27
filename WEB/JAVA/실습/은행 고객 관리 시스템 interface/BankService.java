@@ -11,4 +11,5 @@ public interface BankService {
     ArrayList<AccountDto> getAccountListSortByBalance();
 
     ArrayList<AccountDto> getAccountListSortByUserSeq();
+    
 }
