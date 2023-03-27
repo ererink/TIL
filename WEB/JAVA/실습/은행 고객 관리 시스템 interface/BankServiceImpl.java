@@ -58,6 +58,7 @@ public class BankServiceImpl implements BankService{
         return sortByAccountList;
     }
 
+    
     @Override
     public ArrayList<WS06.AccountDto> getAccountListSortByUserSeq() {
         ArrayList<SavingAccount> sortByAccountList = new ArrayList<>();
