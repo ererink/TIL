@@ -1,4 +1,4 @@
-package day01;
+package JAVA.실습;
 
 import java.util.Scanner;
 

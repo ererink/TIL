@@ -1,4 +1,4 @@
-package day01;
+package JAVA.실습;
 
 public class No5 {
 	public static void main(String[] args) {
