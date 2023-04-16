@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form set</title>
+    <style>
+      button{
+        height: 26px
+      }
+    </style>
+  </head>
+  <body>
+
+      <form action="">
+        <h4>기본 정보</h4>
+        <label for="name">이름</label><br>
+        <input id="name" type="text"/><br>
+        <label for="email">e-mail</label><br>
+        <input id="email" type="email"/><br>
+
+        <h4>성별</h4>
+        <input id="male" type="radio" name="gender" value="M"><label for="male">남</label>
+        <input id="female" type="radio" name="gender" value="F" checked><label for="female">여</label><br>
+
+        <h4>취미</h4>
+        <input id="movie" type="checkbox" name="hobby" value="movie">
+        <label for="movie">영화</label>        
+        <input id="sport" type="checkbox" name="hobby" value="sport" checked>
+        <label for="sport">스포츠</label>
+        <input id="music" type="checkbox" name="hobby" value="music">
+        <label for="music">음악</label>
+
+        <h4>선호하는 재테크</h4>
+        <select name="favorite" id="favorite" multiple> <!-- multiple -->
+            <option value="SV">저축</option>
+            <option value="ST" selected>주식</option>
+            <option value="PS">연금</option>
+        </select>
+        
+        <h4>기타</h4>
+        <textarea name="desc" id="desc" cols="30" rows="5"></textarea>
+      </form>
+      <hr>
+      <label for="userData">입력 바꾸기</label>
+      <input id="userData" type="text"/>
+      <button id="setName">이름</button> <button id="setEmail">e-mail</button> <button id="setDesc">기타</button>
+      <br><br>
+      <label>성별 바꾸기</label> <button id="setMale">남</button> <button id="setFemale">여</button>
+      <br><br>
+      <label>취미 바꾸기</label>
+      <button id="setMovieOn">영화 On</button> <button id="setMovieOff">영화 Off</button> 
+      <button id="setSportOn">스포츠 On</button> <button id="setSportOff">스포츠 Off</button>
+      <button id="setMusicOn">음악 On</button> <button id="setMusicOff">음악 Off</button>
+      <button id="setHobbyAllOn">취미 전체 On</button> <button id="setHobbyAllOff">취미 전체 Off</button>
+      <br><br>
+      <label>선호하는 재테크 바꾸기</label>
+      <button id="setSVOn">저축 On</button> <button id="setSVOff">저축 Off</button> 
+      <button id="setSTOn">주식 On</button> <button id="setSTOff">주식 Off</button> 
+      <button id="setPSOn">연금 On</button> <button id="setPSOff">연금 Off</button>
+      <button id="setFavoriteAllOn">재테크 전체 On</button> <button id="setFavoriteAllOff">재테크 전체 Off</button>
+    </div>
+    <script>
+          // 입력 바꾸기
+          // 버튼 옆 입력 항목에 입력된 내용으로 각 버튼에 표시된 입력 항목의 값을 바꾸세요.
+
+          // 기본 정보 - 이름
+          $('#setName').click(function(){
+                $('#name').val($('#userData').val());
+          });
+
+          // 기본 정보 - 이메일
+          $('#setEmail').click(function(){
+                $('#email').val($('#userData').val());
+          });
+
+          // 기타
+         $('#setDesc').click(function(){
+                $('#desc').val($('#userData').val());
+          });
+
+          // 성별
+
+          // 남 체크하기
+         $('#setMale').click(function(){
+                $('#male').prop("checked", true);
+                $('#female').prop("checked", false);
+          });
+          
+          // 여 체크하기
+         $('#setMale').click(function(){
+                $('#male').prop("checked", flase);
+                $('#female').prop("checked", true);
+          });
+
+
+          // 취미
+
+          // 영화 On
+          $('#setMovieOn').click(function(){
+                $('#movie').prop("checked", true);
+          });
+
+          // 영화 Off
+          $('#setMovieOff').click(function(){
+                $('#movie').prop("checked", false);
+          });
+
+          // 스포츠 On
+          $('#setSportOn').click(function(){
+                $('#sport').prop("checked", true);
+          });
+
+          // 스포츠 Off
+          $('#setSportOff').click(function(){
+                $('#sport').prop("checked", false);
+          });
+
+          // 음악 On
+          $('#setMusicOn').click(function(){
+                $('#music').prop("checked", true);
+          });
+
+          // 음악 Off
+          $('#setMusicOff').click(function(){
+                $('#music').prop("checked", false);
+          });
+          
+
+          // 취미 전체 On
+          $('#setHobbyAllOn').click(function(){
+                $('input[name=hobby]').prop("checked", true);
+          });
+
+          // 취미 전체 Off
+          $('#setHobbyAllOff').click(function(){
+                $('input[name=hobby]').prop("checked", false);
+          });
+
+
+          // 선호하는 재테크
+          // with multiple : 각각 하나씩 제어
+          // without multiple : selected = true 가 발생되는 항목이 선택됨
+
+          // 저축 On
+         $('#setSVOn').click(function(){
+                $('option[value=SV]').prop("selected", true);
+          });
+
+          // 저축 Off
+          $('#setSVOff').click(function(){
+                $('option[value=SV]').prop("selected", false);
+          });
+          
+          // 주식 On
+          $('#setSTOn').click(function(){
+                $('option[value=ST]').prop("selected", true);
+          });
+
+          // 주식 Off
+          $('#setSTOff').click(function(){
+                $('option[value=ST]').prop("selected", false);
+          });
+
+          // 연금 On
+          $('#setPSOn').click(function(){
+                $('option[value=PS]').prop("selected", true);
+          });
+
+          // 연금 Off
+          $('#setPSOff').click(function(){
+                $('option[value=PS]').prop("selected", false);
+          });
+
+          // 재테크 전체 On
+         $('#setFavoriteAllOn').click(function(){
+                $('#favorite option').prop("selected", true);
+          });
+
+          // 재테크 전체 Off
+         $('#setFavoriteAllOff').click(function(){
+                $('#favorite option').prop("selected", false);
+          });
+        
+    </script>
+  </body>
+</html>
