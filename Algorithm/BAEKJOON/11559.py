@@ -8,10 +8,10 @@ dy = [1, -1, 0, 0]
 def search(a, b, clear):
     queue = deque()
     queue.append((a, b))
-    visited = [[0] * 6 for _ in range(12)]
+    visited = [[0] * 6 for _ in range(12)]  # 
     puyo = 1
-    visited[a][b] = puyo
-    
+    visited[a][b] = 1
+
     while queue:
         x, y = queue.popleft()
 
