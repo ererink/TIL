@@ -8,7 +8,7 @@ dy = [1, -1, 0, 0]
 def search(a, b, clear):
     queue = deque()
     queue.append((a, b))
-    visited = [[0] * 6 for _ in range(12)]  # 
+    visited = [[False] * 6 for _ in range(12)]  # 
     puyo = 1
     visited[a][b] = 1
 
@@ -19,24 +19,24 @@ def search(a, b, clear):
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0 <= nx < 12 and 0 <= ny < 6 and visited[nx][ny] == 0:
+            if 0 <= nx < 12 and 0 <= ny < 6 and not visited[nx][ny]:
                 # 같은 색의 뿌요 찾기
                 if maps[nx][ny] == maps[x][y]:
-                    puyo += 1
-                    visited[nx][ny] = 1
+                    puyo += 1                               # 같은 색의 뿌요 카운트
+                    visited[nx][ny] = True
                     queue.append((nx, ny))
 
-    if puyo >= 4:
-        clear += 1
+    if puyo >= 4:                                           # 같은 색의 뿌요가 4개 이상일 경우
+        clear += 1                                          # 터트린 횟수 카운트
         for i in range(12):
             for j in range(6):
-                if visited[i][j] == 1:
-                    maps[i][j] = '.'               
+                if visited[i][j] == True:                   # 뿌요가 있었던 곳 (같은 색의 뿌요를 탐색하고 방문했다면)
+                    maps[i][j] = '.'                        # 해당 뿌요를 터트린다
                 
     return clear
     
 def gdown():
-    for i in range(10, -1, -1):
+    for i in range(10, -1, -1):                             # 뿌요들은 아래 행에 존재하기 때문에 10부터 0까지 탐색 (11이 아닌 이유는 맨 아래행에 가지 못하는 뿌요를 바로 윗칸에 배치하기 위해)
         for j in range(6):
             if maps[i][j] != '.' and maps[i + 1][j] == '.':  # 아래 행이 비어있을 때
                 

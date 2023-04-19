@@ -1,0 +1,16 @@
+footer{
+   background-color: azure;
+   border-top: 1px solid lightgray;
+   margin-top:10px;
+   padding: 10px; 
+
+}
+
+footer ul{
+	list-style-type: none;
+}
+footer ul li{
+	text-align: right;
+	padding-right: 10px;
+	
+}
