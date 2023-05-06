@@ -24,5 +24,3 @@ for i in range(n):
 
 for i in result:
     print(*i)
-
-    
