@@ -9,7 +9,6 @@ Organizing a summary of what I learned every day.
 * [Solving Algorithms](./Algorithm/)
 * [CS](./CS/)
 <br>
-<br>
 
 ### ✏️ 실습
 * [Python](./Python/)
