@@ -4,11 +4,8 @@
 
 Organizing a summary of what I learned every day.
 
-<br>
-
 * [Solving Algorithms](./Algorithm/)
 * [CS](./CS/)
-<br>
 
 ### ✏️ 실습
 * [Python](./Python/)
