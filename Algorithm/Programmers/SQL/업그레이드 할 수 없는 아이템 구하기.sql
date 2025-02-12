@@ -1,0 +1,7 @@
+-- ANTI JOIN : 서로 다른 컬럼을 ON절로 JOIN 명시
+-- 다른 테이블과 관련(매칭)된 행이 존재하지 않는 경우를 찾을 때 사용
+
+SELECT I.ITEM_ID, I.ITEM_NAME, I.RARITY 
+FROM ITEM_INFO I LEFT JOIN ITEM_TREE T 
+WHERE PARENT_ITEM_ID IS NULL 
+ORDER BY ITEM_ID DESC 
